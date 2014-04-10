@@ -123,5 +123,20 @@ jQuery(document).ready(function($) {
         completeAnimation: "fade",
         minimumTime: 200
     });
+	
+	/*-----------------------------------------------------------------------------------*/
+	/*	Toggle
+	/*-----------------------------------------------------------------------------------*/
+	
+	$( ".navbar-toggle" ).click(function() {
+		$( ".main-content" ).animate({
+			left: "200px",
+	  	}, "fast" );
+	  
+	 	$( ".navbar-collapse" ).animate({
+			left: "15",
+	  	}, "fast" );
+		
+	});
 
 });

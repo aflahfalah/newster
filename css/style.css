@@ -33,6 +33,7 @@
 body {
 	background: url(../images/background.gif);
 	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
 }
 
 a,
@@ -510,7 +511,13 @@ textarea:focus {
 /* Navbar Collapse */
 
 .navbar-collapse {
-	max-height: none
+	max-height: 100%;
+	position: fixed;
+	height: 100% !important;
+	top: 50px;
+	left: -200px;
+	width: 200px;
+	background: #222222
 }
 
 /*-----------------------------------------------------------------------------------*/
