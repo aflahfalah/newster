@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="images/favicon.png">
+
+<title>Full Width - Newster</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Extended Glyphicons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="modal fade bs-example-modal-sm" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-sm">
+  
+    <div class="modal-content">
+    
+      <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        
+        <h4 class="modal-title" id="myModalLabel">Please Log In, or <a href="#">Sign Up</a></h4>
+        
+      </div><!-- /.modal-header --> 
+      
+      <div class="modal-body">
+      
+        <form role="form">
+        
+          <div class="form-group">
+          
+            <label for="inputUsernameEmail">Username or email</label>
+            <input type="text" class="form-control" id="inputUsernameEmail">
+            
+          </div><!-- /.form-group -->
+          
+          <div class="form-group"> 
+          
+          	<a class="pull-right" href="#">Forgot password?</a>
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword">
+            
+          </div><!-- /.form-group -->
+          
+          <div class="checkbox pull-right">
+          
+            <label>
+              <input type="checkbox">
+              Remember me 
+            </label>
+              
+          </div><!-- /.checkbox -->
+          
+          <button type="submit" class="btn btn btn-primary">Log In</button>
+          
+        </form>
+        
+      </div><!-- /.modal-body -->
+      
+    </div><!-- /.modal-content --> 
+    
+  </div><!-- /.modal-dialog --> 
+  
+</div><!-- /.modal -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <div class="container search">
+
+    <div class="input-group">
+    
+      <input type="text" placeholder="To search, type and hit enter...">
+      
+      <span class="input-group-btn">
+      
+      <button type="button" id="close" class="btn btn-link"><i class="fa fa-times fa-lg"></i></button>
+      
+      </span><!-- /.input-group-btn --> 
+      
+    </div><!-- /.input-group --> 
+
+  </div><!-- /.container -->
+  
+  <hr>
+  
+  <div class="container">
+  
+    <div class="navbar-header">
+    
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+      </button>
+      
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a> 
+      
+    </div><!-- /.navbar-header -->
+    
+    <div class="collapse navbar-collapse">
+    
+      <ul class="nav navbar-nav">
+        <li class="home"><a href="#"><span></span>Home</a></li>
+        <li class="category1"><a href="#"><span></span>News</a></li>
+        <li class="category2"><a href="#"><span></span>Money</a></li>
+        <li class="dropdown category3"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>Tech <b class="caret"></b></a> 
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="category4"><a href="#"><span></span>Sports</a></li>
+        <li class="dropdown category5"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>Health <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+    
+    <div class="side-buttons">
+    
+      <button type="button" id="open" class="btn"><i class="fa fa-search fa-lg"></i></button>
+      <button type="button" class="btn" data-toggle="modal" data-target="#login"><i class="fa fa-user fa-lg"></i></button>
+      
+    </div><!-- /.side-buttons --> 
+
+  </div><!-- /.container --> 
+  
+</nav><!-- /.navbar --> 
+
+<div class="container main-content">
+
+  <div class="row">
+  
+    <div class="col-md-12 left-content"> 
+      
+      <div class="main-title padding">
+      
+        <h1>Full Width</h1>
+      
+      </div><!-- /.main-title --> 
+      
+      <div class="content padding">
+
+        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+
+        <h3>Buttons</h3>
+        
+        <p>
+          <button type="button" class="btn btn-default btn-xs">Default</button>
+          <button type="button" class="btn btn-primary btn-xs">Primary</button>
+          <button type="button" class="btn btn-success btn-xs">Success</button>
+          <button type="button" class="btn btn-info btn-xs">Info</button>
+          <button type="button" class="btn btn-warning btn-xs">Warning</button>
+          <button type="button" class="btn btn-danger btn-xs">Danger</button>
+          <button type="button" class="btn btn-link btn-xs">Link</button>
+        </p>
+        
+        <p>
+          <button type="button" class="btn btn-default btn-sm">Default</button>
+          <button type="button" class="btn btn-primary btn-sm">Primary</button>
+          <button type="button" class="btn btn-success btn-sm">Success</button>
+          <button type="button" class="btn btn-info btn-sm">Info</button>
+          <button type="button" class="btn btn-warning btn-sm">Warning</button>
+          <button type="button" class="btn btn-danger btn-sm">Danger</button>
+          <button type="button" class="btn btn-link btn-sm">Link</button>
+        </p>
+
+		<p>
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-link">Link</button>
+        </p>
+
+		<p>
+          <button type="button" class="btn btn-default btn-lg">Default</button>
+          <button type="button" class="btn btn-primary btn-lg">Primary</button>
+          <button type="button" class="btn btn-success btn-lg">Success</button>
+          <button type="button" class="btn btn-info btn-lg">Info</button>
+          <button type="button" class="btn btn-warning btn-lg">Warning</button>
+          <button type="button" class="btn btn-danger btn-lg">Danger</button>
+          <button type="button" class="btn btn-link btn-lg">Link</button>
+        </p>
+        
+        <h3>Tabs</h3>
+        
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+          <li><a href="#messages" data-toggle="tab">Messages</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">Tab1 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          <div class="tab-pane" id="profile">Tab 2 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+          <div class="tab-pane" id="messages">Tab3 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+      
+        </div>
+        
+        <h3>Toggles</h3>
+        
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Alerts</h3>
+        
+        <div class="alert alert-success"><strong>Well done!</strong> You successfully read this important alert message.</div>
+        
+        <div class="alert alert-info"><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</div>
+        
+        <div class="alert alert-warning"><strong>Warning!</strong> Better check yourself, you're not looking too good.</div>
+        
+        <div class="alert alert-danger"><strong>Oh snap!</strong> Change a few things up and try submitting again.</div>
+
+        <h3>Columns</h3>
+
+        <div class="row">
+        
+          <div class="col-md-6"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-6"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+        </div>
+        
+        <div class="row">
+        
+          <div class="col-md-4"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-4"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-4"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+        </div>
+        
+        <div class="row">
+        
+          <div class="col-md-3"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-3"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-3"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-3"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+        </div>
+        
+        <div class="row">
+        
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+          <div class="col-md-2"><p>Donec metus leo, elementum at ultrices ac, dapibus at justo. Donec tristique hendrerit dui vitae lacinia. Suspendisse ante ligula, adipiscing porta aliquam et, rutrum nec lectus. Nulla erat risus, molestie non dapibus ac, fermentum vitae felis</p></div>
+          
+        </div>
+
+      </div><!-- /.content -->
+
+    </div><!-- .left-content -->
+
+  </div><!-- /.row -->
+   
+</div><!-- /.container -->
+  
+<div class="container">
+
+  <div class="row padding secondary-nav">
+  
+    <ul class="list-unstyled pull-left">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Full Width</a></li>
+      <li><a href="#">Archive</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <a id="back-to-top" class="pull-right" href="#">Back to Top<span class="glyphicon glyphicon-chevron-up"></span></a> 
+    
+  </div><!-- /.secondary-nav -->
+  
+  <div class="row masonry footer">
+  
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget text-widget clearfix">
+      
+        <h3>About Newster</h3>
+        
+        <p>Duplex comes with support for WP3.0 menus and an extensive set of back-end options.</p>
+        
+        <p>The theme supports 7 custom-made widgets including advertisement spots, Flickr, Latest Tweets, Tabbed Content, RSS Subscribers and Followers and Video!</p>
+        
+        <p>Inbuilt related posts, contact form, author bios, shortcodes, 2 post sliders.... and bundles more...</p>
+        
+      </div><!-- /.widget --> 
+      
+    </div><!-- /.box -->
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget recent-widget clearfix">
+      
+        <h3>Recent Posts</h3>
+        
+        <ul class="list-unstyled">
+          <li><a href="#">Disco-era Remembers A Time When Romance Was Just A Dance Partner Away.</a></li>
+          <li><a href="#">I’m On A Boat (ft. T-Pain) &ndash; Album Version.</a></li>
+          <li><a href="#">Real Celebrity Families of California, North and South. (Vimeo)</a></li>
+          <li><a href="#">Testing Private Ship to the Space Station.</a></li>
+          <li><a href="#">It’s Not Dick Tracy’s, but It Can Screen Your Messages. A new generation.</a></li>
+        </ul>
+        
+      </div><!-- /.widget --> 
+      
+    </div><!-- /.box -->
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget flickr-widget clearfix">
+      
+        <h3>Flickr Widget</h3>
+        
+        <div class="row separator">
+        
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+        </div><!-- /.row -->
+        
+        <div class="row">
+        
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+        </div><!-- /.row -->
+        
+      </div><!-- /.widget --> 
+ 
+    </div><!-- /.box --> 
+    
+  </div><!-- /.footer -->
+  
+  <div class="row copyright padding">
+  
+    <p class="pull-left">&copy; 2014 <a href="">Newster</a>. All rights reserved</p>
+    
+    <ul class="list-inline pull-right">
+      <li><a class="link" href="#" data-toggle="tooltip" title="Facebook"><span class="fa fa-facebook-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Twitter"><span class="fa fa-twitter-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Google+"><span class="fa fa-google-plus-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Youtube"><span class="fa fa-youtube-play"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="LinkedIn"><span class="fa fa-linkedin-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Vimeo"><span class="fa fa-vimeo-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Flickr"><span class="fa fa-flickr"></span></a></li>
+    </ul>
+    
+  </div><!-- /.copyright --> 
+  
+</div><!-- /.container --> 
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.mobile.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.imagesloaded.min.js"></script> 
+<script src="js/jquery.masonry.min.js"></script> 
+<script src="js/jquery.fitvids.js"></script> 
+<script src="js/jquery.custom.js"></script>
+
+</body>
+</html>

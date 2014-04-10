@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="images/favicon.png">
+
+<title>Archive - Newster</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- Extended Glyphicons -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Custom Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="modal fade bs-example-modal-sm" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-sm">
+  
+    <div class="modal-content">
+    
+      <div class="modal-header">
+      
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        
+        <h4 class="modal-title" id="myModalLabel">Please Log In, or <a href="#">Sign Up</a></h4>
+        
+      </div><!-- /.modal-header --> 
+      
+      <div class="modal-body">
+      
+        <form role="form">
+        
+          <div class="form-group">
+          
+            <label for="inputUsernameEmail">Username or email</label>
+            <input type="text" class="form-control" id="inputUsernameEmail">
+            
+          </div><!-- /.form-group -->
+          
+          <div class="form-group"> 
+          
+          	<a class="pull-right" href="#">Forgot password?</a>
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword">
+            
+          </div><!-- /.form-group -->
+          
+          <div class="checkbox pull-right">
+          
+            <label>
+              <input type="checkbox">
+              Remember me 
+            </label>
+              
+          </div><!-- /.checkbox -->
+          
+          <button type="submit" class="btn btn btn-primary">Log In</button>
+          
+        </form>
+        
+      </div><!-- /.modal-body -->
+      
+    </div><!-- /.modal-content --> 
+    
+  </div><!-- /.modal-dialog --> 
+  
+</div><!-- /.modal -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+  <div class="container search">
+
+    <div class="input-group">
+    
+      <input type="text" placeholder="To search, type and hit enter...">
+      
+      <span class="input-group-btn">
+      
+      <button type="button" id="close" class="btn btn-link"><i class="fa fa-times fa-lg"></i></button>
+      
+      </span><!-- /.input-group-btn --> 
+      
+    </div><!-- /.input-group --> 
+
+  </div><!-- /.container -->
+  
+  <hr>
+  
+  <div class="container">
+  
+    <div class="navbar-header">
+    
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+      </button>
+      
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a> 
+      
+    </div><!-- /.navbar-header -->
+    
+    <div class="collapse navbar-collapse">
+    
+      <ul class="nav navbar-nav">
+        <li class="home"><a href="#"><span></span>Home</a></li>
+        <li class="category1"><a href="#"><span></span>News</a></li>
+        <li class="category2"><a href="#"><span></span>Money</a></li>
+        <li class="dropdown category3"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>Tech <b class="caret"></b></a> 
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li class="category4"><a href="#"><span></span>Sports</a></li>
+        <li class="dropdown category5"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>Health <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+    
+    <div class="side-buttons">
+    
+      <button type="button" id="open" class="btn"><i class="fa fa-search fa-lg"></i></button>
+      <button type="button" class="btn" data-toggle="modal" data-target="#login"><i class="fa fa-user fa-lg"></i></button>
+      
+    </div><!-- /.side-buttons --> 
+
+  </div><!-- /.container --> 
+  
+</nav><!-- /.navbar --> 
+
+<div class="container main-content">
+
+  <div class="row">
+  
+    <div class="col-md-8 left-content"> 
+      
+      <div class="main-title padding">
+      
+        <h1>Archive</h1>
+      
+      </div><!-- /.main-title --> 
+      
+      <div class="content padding">
+
+        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+
+        <h4>Last 30 Posts</h4>
+        
+        <ul>
+          <li><a href="#">Disco-era Remembers A Time When Romance Was Just A Dance Partner Away.</a></li>
+          <li><a href="#">I’m On A Boat (ft. T-Pain) – Album Version.</a></li>
+          <li><a href="#">Real Celebrity Families of California, North and South. (Vimeo)</a></li>
+          <li><a href="#">Testing Private Ship to the Space Station.</a></li>
+          <li><a href="#">It’s Not Dick Tracy’s, but It Can Screen Your Messages. A new generation.</a></li>
+          <li><a href="#">Shaquille O’Neal Earns His Doctorate.</a></li>
+          <li><a href="#">What That Speeding Ticket May Really Cost You.</a></li>
+          <li><a href="#">Jimmie Johnson Delivers 200th Cup to Rick Hendrick.</a></li>
+          <li><a href="#">Big Buck Bunny Movie Trailer (Self Hosted Video)</a></li>
+          <li><a href="#">Digging Deeply Into Beethoven in Head and Heart (Self Hosted Audio)</a></li>
+          <li><a href="#">Introducing ViewPort. An Elegant WordPress Theme for Content Lovers.</a></li>
+          <li><a href="#">In San Francisco, A Couple Domesticates A Former Warehouse.</a></li>
+          <li><a href="#">Rediscovering a Shortcut to an Hourglass Figure. A Must Read.</a></li>
+        </ul>
+        
+        <h4>Archives by Month:</h4>
+        
+        <ul>
+          <li><a href="#">May 2012</a></li>
+        </ul>
+        
+        <h4>Archives by Subject:</h4>
+        
+        <ul>
+          <li class="cat-item cat-item-3"><a href="#">Audio</a></li>
+          <li class="cat-item cat-item-4"><a href="#">Gallery</a></li>
+          <li class="cat-item cat-item-5"><a href="#">Standard</a></li>
+          <li class="cat-item cat-item-6"><a href="#">Video</a></li>
+        </ul>
+
+      </div><!-- /.content -->
+
+    </div><!-- .left-content -->
+    
+    <div class="col-md-4 col-sm-12 sidebar padding hidden-xs"> 
+      
+      <div class="widget social-widget clearfix">
+      
+        <div class="row">
+        
+          <div class="col-md-4 col-sm-4 facebook-count box"> 
+          
+            <a href="#" class="icon"><span class="fa fa-facebook fa-lg"></span></a>
+          
+            <div class="info">
+            
+              <a href="#" class="count">Facebook</a>
+              <a href="#" class="title">Like</a>
+              
+            </div><!-- /.info --> 
+            
+          </div><!-- /.facebook-count --> 
+          
+          <div class="col-md-4 col-sm-4 twitter-count box"> 
+          
+            <a href="#" class="icon"><span class="fa fa-twitter fa-lg"></span></a>
+          
+            <div class="info"> 
+            
+              <a href="#" class="count">Twitter</a> 
+              <a href="#" class="title">Follow</a>
+              
+            </div><!-- /.info -->
+            
+          </div><!-- /.twitter-count --> 
+          
+          <div class="col-md-4 col-sm-4 rss-count box"> 
+          
+            <a href="#" class="icon"><span class="fa fa-rss fa-lg"></span></a>
+          
+            <div class="info">
+            
+              <a href="#" class="count">RSS</a> 
+              <a href="#" class="title">Subscribe</a>
+              
+            </div><!-- /.info -->
+            
+          </div><!-- /.rss-count --> 
+          
+        </div><!-- /.row -->
+        
+      </div><!-- /.social-widget -->
+      
+      <div class="widget tab-widget clearfix">
+      
+        <div class="tab-body">
+        
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
+            <li><a href="#latest" data-toggle="tab">Latest</a></li>
+            <li><a href="#comments" data-toggle="tab">Comments</a></li>
+          </ul>
+          
+          <div class="tab-content">
+          
+            <div class="tab-pane active" id="popular">
+            
+              <ul class="list-unstyled">
+              
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+              </ul>
+              
+            </div><!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="latest">
+            
+              <ul class="list-unstyled">
+              
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/post1.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">Skype 5.0 Beta for Mac… But No Facebook?</a></h5>
+                    
+                    <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+              </ul>
+              
+            </div><!-- /.tab-pane -->
+            
+            <div class="tab-pane" id="comments">
+            
+               <ul class="list-unstyled">
+              
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/author.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">admin: Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/author.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">admin: Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/author.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">admin: Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/author.jpg" alt="Tab Post"/></a> 
+                  
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">admin: Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+                <li class="clearfix">
+                
+                  <div class="pull-left image">
+                  
+                    <a href="#"><img src="images/tabs/author.jpg" alt="Tab Post"/></a> 
+                    
+                  </div><!-- /.image -->
+                  
+                  <div class="pull-left info">
+                  
+                    <h5><a href="#">admin: Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    
+                  </div><!-- /.info --> 
+                  
+                </li>
+                
+              </ul>
+              
+            </div><!-- /.tab-pane --> 
+            
+          </div><!-- /.tab-content --> 
+          
+        </div><!-- /.tab-body --> 
+        
+      </div><!-- /.tab-widget -->
+
+      <div class="widget video-widget clearfix">
+      
+        <div class="video-body padding">
+        
+          <h3>Video Widget</h3>
+          
+          <iframe src="http://player.vimeo.com/video/25118844?title=0&amp;byline=0&amp;portrait=0" width="280" height="190" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>            
+          
+          <p>An infographic dissecting the nature and ramifications of Stuxnet, the first weapon made entirely out of code.</p>
+          
+        </div><!-- /.video-body --> 
+        
+      </div><!-- /.video-widget -->
+
+    </div><!-- /.sidebar --> 
+    
+  </div><!-- /.row -->
+   
+</div><!-- /.container -->
+  
+<div class="container">
+
+  <div class="row padding secondary-nav">
+  
+    <ul class="list-unstyled pull-left">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Full Width</a></li>
+      <li><a href="#">Archive</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <a id="back-to-top" class="pull-right" href="#">Back to Top<span class="glyphicon glyphicon-chevron-up"></span></a> 
+    
+  </div><!-- /.secondary-nav -->
+  
+  <div class="row masonry footer">
+  
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget text-widget clearfix">
+      
+        <h3>About Newster</h3>
+        
+        <p>Duplex comes with support for WP3.0 menus and an extensive set of back-end options.</p>
+        
+        <p>The theme supports 7 custom-made widgets including advertisement spots, Flickr, Latest Tweets, Tabbed Content, RSS Subscribers and Followers and Video!</p>
+        
+        <p>Inbuilt related posts, contact form, author bios, shortcodes, 2 post sliders.... and bundles more...</p>
+        
+      </div><!-- /.widget --> 
+      
+    </div><!-- /.box -->
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget recent-widget clearfix">
+      
+        <h3>Recent Posts</h3>
+        
+        <ul class="list-unstyled">
+          <li><a href="#">Disco-era Remembers A Time When Romance Was Just A Dance Partner Away.</a></li>
+          <li><a href="#">I’m On A Boat (ft. T-Pain) &ndash; Album Version.</a></li>
+          <li><a href="#">Real Celebrity Families of California, North and South. (Vimeo)</a></li>
+          <li><a href="#">Testing Private Ship to the Space Station.</a></li>
+          <li><a href="#">It’s Not Dick Tracy’s, but It Can Screen Your Messages. A new generation.</a></li>
+        </ul>
+        
+      </div><!-- /.widget --> 
+      
+    </div><!-- /.box -->
+    
+    <div class="col-md-4 col-sm-6 col-xs-12 box padding">
+    
+      <div class="widget flickr-widget clearfix">
+      
+        <h3>Flickr Widget</h3>
+        
+        <div class="row separator">
+        
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+        </div><!-- /.row -->
+        
+        <div class="row">
+        
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+          <div class="col-lg-3 col-sm-3 col-xs-3">
+          
+            <a href="#" class="image"><img class="img-responsive" src="images/flickr.jpg" alt="Flickr"/></a>
+          
+          </div>
+          
+        </div><!-- /.row -->
+        
+      </div><!-- /.widget --> 
+ 
+    </div><!-- /.box --> 
+    
+  </div><!-- /.footer -->
+  
+  <div class="row copyright padding">
+  
+    <p class="pull-left">&copy; 2014 <a href="">Newster</a>. All rights reserved</p>
+    
+    <ul class="list-inline pull-right">
+      <li><a class="link" href="#" data-toggle="tooltip" title="Facebook"><span class="fa fa-facebook-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Twitter"><span class="fa fa-twitter-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Google+"><span class="fa fa-google-plus-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Youtube"><span class="fa fa-youtube-play"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="LinkedIn"><span class="fa fa-linkedin-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Vimeo"><span class="fa fa-vimeo-square"></span></a></li>
+      <li><a class="link" href="#" data-toggle="tooltip" title="Flickr"><span class="fa fa-flickr"></span></a></li>
+    </ul>
+    
+  </div><!-- /.copyright --> 
+  
+</div><!-- /.container --> 
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.mobile.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.imagesloaded.min.js"></script> 
+<script src="js/jquery.masonry.min.js"></script> 
+<script src="js/jquery.fitvids.js"></script> 
+<script src="js/jquery.custom.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("#contactForm").validate();
+	});
+</script>
+
+</body>
+</html>
