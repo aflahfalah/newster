@@ -510,7 +510,7 @@ textarea:focus {
 
 /* Navbar Collapse */
 
-.navbar-collapse {
+.navbar-collapse.in{
 	max-height: 100%;
 	position: fixed;
 	height: 100% !important;
@@ -518,6 +518,13 @@ textarea:focus {
 	left: -200px;
 	width: 200px;
 	background: #222222
+}
+
+
+/* Navbar Collapse */
+
+.navbar-collapse.in .dropdown-menu {
+	display: block !important
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1384,7 +1391,8 @@ label.error {
 /*	8. Media Queries
 /* ---------------------------------------------------------------------- */
 
-@media(min-width:1200px){}
+@media(min-width:1200px){
+	}
 
 @media(min-width:992px){}
 

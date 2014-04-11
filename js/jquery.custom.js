@@ -136,7 +136,25 @@ jQuery(document).ready(function($) {
 	 	$( ".navbar-collapse" ).animate({
 			left: "15",
 	  	}, "fast" );
-		
+
 	});
+	
+	
+	/*-----------------------------------------------------------------------------------*/
+	/*	Add class to navbar on movile
+	/*-----------------------------------------------------------------------------------*/
+	
+	
+	(function($) {
+    var $window = $(window),
+        $html = $('.navbar-collapse');
+
+    $window.resize(function resize() {
+        if ($window.width() < 768) {
+           	return $html.addClass('nav-stacked');
+        }
+        $html.removeClass('nav-stacked');
+    }).trigger('resize');
+	})(jQuery);
 
 });
