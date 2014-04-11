@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 		$('.masonry').masonry('bindResize');
 	});
 
-	$( "#load-more" ).click(function() {
+	$("#load-more").click(function() {
 	var $loadMore = $(this);
 	$loadMore.text('Loading...');
 		$.get('load-more.html', function( data ) {
@@ -128,17 +128,17 @@ jQuery(document).ready(function($) {
 	/*	Toggle
 	/*-----------------------------------------------------------------------------------*/
 	
-	$( ".navbar-toggle" ).click(function() {
-		var position = $( ".navbar-collapse" ).css('left'),
-			menu = $( ".navbar-collapse" ),
+	$(".navbar-toggle").click(function() {
+		var position = $(".navbar-collapse").css('left'),
+			menu = $(".navbar-collapse"),
 			container = $( ".main-content" );
 
-		if( position != "15px" ){
-			container.animate({left: "200px"}, "fast" );		  
-		 	menu.animate({left: "15px"}, "fast" );
+		if( position != "15px"){
+			container.animate({left: "200px"}, "fast");		  
+		 	menu.animate({left: "15px"}, "fast");
 		}else{
-			container.animate({left: "0px"}, "fast" );		  
-		 	menu.animate({left: "-200px"}, "fast" );
+			container.animate({left: "0px"}, "fast");		  
+		 	menu.animate({left: "-200px"}, "fast");
 		}
 	});
 	
@@ -200,7 +200,7 @@ jQuery(document).ready(function($) {
 					left: "0",
 				}, "fast" );
 			  
-				$( ".navbar-collapse" ).fadeIn({
+				$( ".navbar-collapse" ).animate({
 					left: "-200px",
 				}, "fast" );
         	}        
