@@ -152,8 +152,9 @@ jQuery(document).ready(function($) {
     $window.resize(function resize() {
         if ($window.width() < 768) {
            	return $html.addClass('nav-stacked');
-        }
-        $html.removeClass('nav-stacked');
+        }else{
+        	$html.removeClass('nav-stacked');
+        }        
     }).trigger('resize');
 	})(jQuery);
 
