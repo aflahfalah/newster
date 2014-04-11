@@ -134,28 +134,86 @@ jQuery(document).ready(function($) {
 	  	}, "fast" );
 	  
 	 	$( ".navbar-collapse" ).animate({
-			left: "15",
+			left: "15px",
 	  	}, "fast" );
-
 	});
 	
-	
-	/*-----------------------------------------------------------------------------------*/
-	/*	Add class to navbar on movile
-	/*-----------------------------------------------------------------------------------*/
-	
-	
-	(function($) {
-    var $window = $(window),
-        $html = $('.navbar-collapse');
+	/*
+	$('.navbar-toggle').on('click', function () {
+    var mTop = 0;
+    if ($(this).hasClass('openpanel')) {
+        $(this).removeClass('openpanel').addClass('closepanel');
+    } else {
+        mTop = -300;
+        $(this).removeClass('closepanel').addClass('openpanel'); 
+    }
 
-    $window.resize(function resize() {
-        if ($window.width() < 768) {
-           	return $html.addClass('nav-stacked');
-        }else{
-        	$html.removeClass('nav-stacked');
-        }        
-    }).trigger('resize');
+    $("#header").animate({ "marginTop": mTop });
+});*/
+	
+	/*-----------------------------------------------------------------------------------*/
+	/*	Show dropdown on hover
+	/*-----------------------------------------------------------------------------------*/
+	
+	(function ($, window, delay) {
+		var theTimer = 0;
+		var theElement = null;
+		var theLastPosition = {x:0,y:0};
+	  	$('[data-toggle]')
+		.closest('li')
+		.on('mouseenter', function (inEvent) {
+			if (theElement) theElement.removeClass('open');
+			window.clearTimeout(theTimer);
+			theElement = $(this);
+			theTimer = window.setTimeout(function () {
+		  		theElement.addClass('open');
+			}, delay);
+	  	})
+		.on('mousemove', function (inEvent) {
+			if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+			   Math.abs(theLastPosition.y - inEvent.ScreenY) > 4){
+				theLastPosition.x = inEvent.ScreenX;
+				theLastPosition.y = inEvent.ScreenY;
+				return;
+			}
+			if (theElement.hasClass('open')) return;
+				window.clearTimeout(theTimer);
+				theTimer = window.setTimeout(function () {
+			  	theElement.addClass('open');
+			}, delay);
+		})
+		.on('mouseleave', function (inEvent) {
+			window.clearTimeout(theTimer);
+			theElement = $(this);
+			theTimer = window.setTimeout(function () {
+			  theElement.removeClass('open');
+			}, delay);
+	  	});
+	})(jQuery, window, 200); // 200 is the delay in milliseconds
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	Add class to navbar on mobile
+	/*-----------------------------------------------------------------------------------*/
+
+	(function($) {
+    	var $window = $(window),
+        	$html = $('.navbar-collapse');
+
+    	$window.resize(function resize() {
+        	if ($window.width() < 768) {
+           		return $html.addClass('nav-stacked');
+        	}else{
+				$html.removeClass('nav-stacked');
+				
+				$( ".main-content" ).animate({
+					left: "0",
+				}, "fast" );
+			  
+				$( ".navbar-collapse" ).fadeIn({
+					left: "-200px",
+				}, "fast" );
+        	}        
+    	}).trigger('resize');
 	})(jQuery);
 
 });

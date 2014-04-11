@@ -432,10 +432,6 @@ textarea:focus {
     margin-right: -10px;
 }
 
-.dropdown-submenu:hover > a:after {
-    border-left-color: #fff;
-}
-
 .dropdown-submenu.pull-left {
     float: none;
 }
@@ -463,6 +459,10 @@ textarea:focus {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
+}
+
+.side-buttons .btn:hover {
+	background: #333333
 }
 
 .side-buttons .btn:last-child {
@@ -510,21 +510,54 @@ textarea:focus {
 
 /* Navbar Collapse */
 
-.navbar-collapse.in{
+.navbar-collapse.nav-stacked{
 	max-height: 100%;
 	position: fixed;
 	height: 100% !important;
 	top: 50px;
 	left: -200px;
 	width: 200px;
-	background: #222222
+	background: #333333;
+	-webkit-box-shadow: inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
 
 /* Navbar Collapse */
 
-.navbar-collapse.in .dropdown-menu {
-	display: block !important
+.navbar-collapse.nav-stacked .dropdown-menu {
+	display: block
+}
+
+.navbar-collapse.nav-stacked .dropdown-submenu > .dropdown-menu {
+    top: auto;
+    left: auto;
+    margin-top: -15px;
+    margin-left: -1px !important;
+}
+
+.navbar-collapse.nav-stacked .dropdown-submenu > a:after {
+    display: block;
+    content: inherit;
+    float: none;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-left-color: #ccc;
+    margin-top: 6px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
 }
 
 /*-----------------------------------------------------------------------------------*/
