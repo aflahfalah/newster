@@ -129,27 +129,18 @@ jQuery(document).ready(function($) {
 	/*-----------------------------------------------------------------------------------*/
 	
 	$( ".navbar-toggle" ).click(function() {
-		$( ".main-content" ).animate({
-			left: "200px",
-	  	}, "fast" );
-	  
-	 	$( ".navbar-collapse" ).animate({
-			left: "15px",
-	  	}, "fast" );
-	});
-	
-	/*
-	$('.navbar-toggle').on('click', function () {
-    var mTop = 0;
-    if ($(this).hasClass('openpanel')) {
-        $(this).removeClass('openpanel').addClass('closepanel');
-    } else {
-        mTop = -300;
-        $(this).removeClass('closepanel').addClass('openpanel'); 
-    }
+		var position = $( ".navbar-collapse" ).css('left'),
+			menu = $( ".navbar-collapse" ),
+			container = $( ".main-content" );
 
-    $("#header").animate({ "marginTop": mTop });
-});*/
+		if( position != "15px" ){
+			container.animate({left: "200px"}, "fast" );		  
+		 	menu.animate({left: "15px"}, "fast" );
+		}else{
+			container.animate({left: "0px"}, "fast" );		  
+		 	menu.animate({left: "-200px"}, "fast" );
+		}
+	});
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show dropdown on hover
