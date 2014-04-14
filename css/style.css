@@ -445,7 +445,7 @@ textarea:focus {
 }
 
 .side-buttons .btn {
-	padding: 16px;
+	padding: 16px 14px;
 	font-size: 11px;
 	color: #ffffff;
 	float: left;
@@ -503,21 +503,24 @@ textarea:focus {
 	border-radius: 0;
 }
 
+.navbar-toggle .icon-bar {
+	width: 16px;
+}
+
 /* Navbar Collapse */
 
 .navbar-collapse.nav-stacked{
 	max-height: 100%;
 	position: fixed;
 	height: 100% !important;
-	top: 50px;
+	top: 0;
 	left: -200px;
 	width: 200px;
 	background: #333333;
 	-webkit-box-shadow: inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         inset -5px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
-
 
 /* Navbar Collapse */
 

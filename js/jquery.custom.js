@@ -125,24 +125,6 @@ jQuery(document).ready(function($) {
     });
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Toggle
-	/*-----------------------------------------------------------------------------------*/
-	
-	$(".navbar-toggle").click(function() {
-		var position = $(".navbar-collapse").css('left'),
-			menu = $(".navbar-collapse"),
-			container = $( ".main-content" );
-
-		if( position != "15px"){
-			container.animate({left: "200px"}, "fast");		  
-		 	menu.animate({left: "15px"}, "fast");
-		}else{
-			container.animate({left: "0px"}, "fast");		  
-		 	menu.animate({left: "-200px"}, "fast");
-		}
-	});
-	
-	/*-----------------------------------------------------------------------------------*/
 	/*	Show dropdown on hover
 	/*-----------------------------------------------------------------------------------*/
 	
@@ -181,6 +163,28 @@ jQuery(document).ready(function($) {
 			}, delay);
 	  	});
 	})(jQuery, window, 200); // 200 is the delay in milliseconds
+	
+	/*-----------------------------------------------------------------------------------*/
+	/*	Toggle
+	/*-----------------------------------------------------------------------------------*/
+	
+	$(".navbar-toggle").click(function() {
+		var position = $(".navbar-collapse").css('left'),
+			menu = $(".navbar-collapse"),
+			container = $( ".main-content" );
+
+		if( position != "15px"){
+			container.animate({left: "200px"}, "fast");		  
+		 	menu.animate({left: "15px"}, "fast");
+			$(".navbar").animate({left: "200px"}, "fast");
+			$("body").css("overflow-y","hidden");
+		}else{
+			container.animate({left: "0px"}, "fast");		  
+		 	menu.animate({left: "-200px"}, "fast");
+			$(".navbar").animate({left: "0px"}, "fast");
+			$( "body" ).css("overflow-y","auto");	
+		}
+	});
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Add class to navbar on mobile
