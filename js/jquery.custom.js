@@ -132,9 +132,7 @@ jQuery(document).ready(function($) {
 		var theTimer = 0;
 		var theElement = null;
 		var theLastPosition = {x:0,y:0};
-	  	$('[data-toggle]')
-		.closest('li')
-		.on('mouseenter', function (inEvent) {
+	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {
 			if (theElement) theElement.removeClass('open');
 			window.clearTimeout(theTimer);
 			theElement = $(this);

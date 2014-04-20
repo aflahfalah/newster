@@ -102,9 +102,6 @@ textarea:focus {
 .image > a {
 	display: block;
 	background-color: #000000;
-	/*background-image: url(../images/plus.png);
-	background-repeat: no-repeat;
-	background-position: center;*/
 }
 
 .image > a > img:hover {
@@ -316,11 +313,10 @@ textarea:focus {
 	box-shadow: 0 1px 3px rgba(50, 50, 50, 0.35);
 }
 
-.navbar-inverse hr {
+.navbar-inverse .navbar-wrap {
+	height: 50px;
 	border-top: 1px solid #343434;
-	position: relative;
-	top: 1px;
-	margin: 0;
+	border-bottom: 1px solid #343434;
 }
 
 .navbar-inverse .navbar-header {
@@ -355,6 +351,9 @@ textarea:focus {
 	font-family: 'Montserrat', sans-serif;
 	margin-left: -1px;
 	z-index: 2;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 50px
 }
 
 .navbar-inverse .navbar-nav > li > a > span {
@@ -470,7 +469,9 @@ textarea:focus {
 
 .navbar-toggle {
 	float: left;
-	padding: 18px 14px;
+	padding: 0 15px;
+	height: 50px;
+	line-height: 50px;
 	border: 0;
 	margin: 0;
 	border-right: 1px solid #343434;
@@ -492,7 +493,9 @@ textarea:focus {
 }
 
 .side-buttons .btn {
-	padding: 16px 14px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
 	font-size: 11px;
 	color: #ffffff;
 	float: left;
