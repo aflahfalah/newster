@@ -42,8 +42,8 @@ jQuery(document).ready(function($) {
 	});
 	
 	$(window).resize(function() {
-	console.log('resized')
-		$('.masonry').masonry('bindResize');
+		//console.log('resized')
+		//$('.masonry').masonry('bindResize');
 	});
 
 	$("#load-more").click(function() {
@@ -129,18 +129,23 @@ jQuery(document).ready(function($) {
 	/*-----------------------------------------------------------------------------------*/
 	
 	(function ($, window, delay) {
-		var theTimer = 0;
-		var theElement = null;
-		var theLastPosition = {x:0,y:0};
-	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {
+		var theTimer = 0,
+			theElement = null,
+			theLastPosition = {x:0,y:0},
+			$window = $(window);
+
+	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
 			if (theElement) theElement.removeClass('open');
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-		  		theElement.addClass('open');
+		  		//theElement.addClass('open');
+		  		if ($window.width() > 768) {
+		  			theElement.addClass('open');
+		  		}
 			}, delay);
 	  	})
-		.on('mousemove', function (inEvent) {
+		.on('mousemove', function (inEvent) {			
 			if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
 			   Math.abs(theLastPosition.y - inEvent.ScreenY) > 4){
 				theLastPosition.x = inEvent.ScreenX;
@@ -150,14 +155,21 @@ jQuery(document).ready(function($) {
 			if (theElement.hasClass('open')) return;
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
-			  	theElement.addClass('open');
+			  	//theElement.addClass('open');
+		  		if ($window.width() > 768) {
+		  			theElement.addClass('open');
+		  		}
 			}, delay);
 		})
-		.on('mouseleave', function (inEvent) {
+		.on('mouseleave', function (inEvent) {			
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-			  theElement.removeClass('open');
+			  //theElement.removeClass('open');
+		  		if ($window.width() > 768) {
+		  			theElement.removeClass('open');
+		  		}
+
 			}, delay);
 	  	});
 	})(jQuery, window, 200); // 200 is the delay in milliseconds
@@ -194,7 +206,7 @@ jQuery(document).ready(function($) {
 
     	$window.resize(function resize() {
         	if ($window.width() < 768) {
-           		return $html.addClass('nav-stacked');
+           		return $html.addClass('nav-stacked');           		
         	}else{
 				$html.removeClass('nav-stacked');
 				
