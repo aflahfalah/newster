@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 		  		//theElement.addClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -156,7 +156,7 @@ jQuery(document).ready(function($) {
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
 			  	//theElement.addClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -166,7 +166,7 @@ jQuery(document).ready(function($) {
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 			  //theElement.removeClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.removeClass('open');
 		  		}
 
@@ -181,18 +181,18 @@ jQuery(document).ready(function($) {
 	$(".navbar-toggle").click(function() {
 		var position = $(".navbar-collapse").css('left'),
 			menu = $(".navbar-collapse"),
-			container = $( ".main-content" );
+			container = $(".main-content");
 
 		if( position != "15px"){
 			container.animate({left: "200px"}, "fast");		  
 		 	menu.animate({left: "15px"}, "fast");
 			$(".navbar").animate({left: "200px"}, "fast");
-			$("body").css("overflow","hidden");
+			//$("body").css("overflow","hidden");
 		}else{
 			container.animate({left: "0px"}, "fast");		  
 		 	menu.animate({left: "-200px"}, "fast");
 			$(".navbar").animate({left: "0px"}, "fast");
-			$( "body" ).css("overflow","auto");	
+			//$( "body" ).css("overflow","auto");	
 		}
 	});
 
@@ -205,7 +205,7 @@ jQuery(document).ready(function($) {
         	$html = $('.navbar-collapse');
 
     	$window.resize(function resize() {
-        	if ($window.width() < 768) {
+        	if ($window.width() < 767) {
            		return $html.addClass('nav-side');           		
         	}else{
 				$html.removeClass('nav-side');
