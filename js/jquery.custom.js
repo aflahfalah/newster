@@ -187,12 +187,12 @@ jQuery(document).ready(function($) {
 			container.animate({left: "200px"}, "fast");		  
 		 	menu.animate({left: "15px"}, "fast");
 			$(".navbar").animate({left: "200px"}, "fast");
-			$("body").css("overflow-y","hidden");
+			$("body").css("overflow","hidden");
 		}else{
 			container.animate({left: "0px"}, "fast");		  
 		 	menu.animate({left: "-200px"}, "fast");
 			$(".navbar").animate({left: "0px"}, "fast");
-			$( "body" ).css("overflow-y","auto");	
+			$( "body" ).css("overflow","auto");	
 		}
 	});
 
@@ -206,9 +206,9 @@ jQuery(document).ready(function($) {
 
     	$window.resize(function resize() {
         	if ($window.width() < 768) {
-           		return $html.addClass('nav-stacked');           		
+           		return $html.addClass('nav-side');           		
         	}else{
-				$html.removeClass('nav-stacked');
+				$html.removeClass('nav-side');
 				
 				$( ".main-content" ).animate({
 					left: "0",

@@ -33,7 +33,6 @@
 body {
 	background: url(../images/background.gif);
 	font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;
 }
 
 a,
@@ -429,39 +428,50 @@ textarea:focus {
     margin-left: 10px;
 }
 
-/* Navbar Collapse */
+/* Mobile Navbar */
 
-.navbar-collapse.nav-stacked {
+.navbar-collapse.nav-side {
 	max-height: 100%;
 	height: 100% !important;
 	position: fixed;
 	top: 0;
-	left: -200px;
+	left: 0;
 	width: 200px;
-	background: #333333;
+	background: #666666;
 }
 
-.navbar-collapse.nav-stacked .dropdown-menu {
+/*.navbar-collapse.nav-side .navbar-nav {
+	margin: 50px 15px
+}*/
+
+.navbar-collapse.nav-side .dropdown-menu {
 	display: block;
 	position: inherit;
 	background: none !important;
 	-webkit-box-shadow: none;
-	-moz-box-shadow:    none;
-	box-shadow:         none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
-.navbar-collapse.nav-stacked ul > li > a {
-	background: none !important
+.navbar-collapse.nav-side ul > li,
+.navbar-collapse.nav-side ul > li:last-child {
+	border: 0
 }
 
-.navbar-collapse.nav-stacked .dropdown-submenu > .dropdown-menu {
+.navbar-collapse.nav-side ul > li > a {
+	background: none !important;
+	margin: 0;
+	border-bottom: 1px solid #8d9198
+}
+
+.navbar-collapse.nav-side .dropdown-submenu > .dropdown-menu {
     top: auto;
     left: auto;
     margin-top: 0;
-    margin-left: 0 !important;
+    margin-left: 15px !important;
 }
 
-.navbar-collapse.nav-stacked .dropdown-submenu > a:after {
+.navbar-collapse.nav-side .dropdown-submenu > a:after {
     display: none;
 }
 
@@ -506,9 +516,10 @@ textarea:focus {
 	border-radius: 0;
 }
 
-.side-buttons .btn:hover {
+/*.side-buttons .btn:hover,
+.side-buttons .btn:focus {
 	background: #333333
-}
+}*/
 
 .side-buttons .btn:last-child {
 	border-right: 1px solid #343434
@@ -521,7 +532,7 @@ textarea:focus {
 
 .search input {
 	color: #ffffff;
-	background: #222222;
+	background: transparent;
 	padding: 20px 0;
 	width: 100%;
 	border: 0;
@@ -1438,7 +1449,7 @@ label.error {
 	}
 	
 	.main-content {
-		margin-top: 70px
+		margin-top: 69px
 	}
 	
 	#slider .carousel-caption {
