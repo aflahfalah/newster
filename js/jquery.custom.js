@@ -139,7 +139,6 @@ jQuery(document).ready(function($) {
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-		  		//theElement.addClass('open');
 		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
@@ -155,7 +154,6 @@ jQuery(document).ready(function($) {
 			if (theElement.hasClass('open')) return;
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
-			  	//theElement.addClass('open');
 		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
@@ -165,11 +163,9 @@ jQuery(document).ready(function($) {
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-			  //theElement.removeClass('open');
 		  		if ($window.width() > 767) {
 		  			theElement.removeClass('open');
 		  		}
-
 			}, delay);
 	  	});
 	})(jQuery, window, 200); // 200 is the delay in milliseconds
@@ -178,21 +174,21 @@ jQuery(document).ready(function($) {
 	/*	Toggle
 	/*-----------------------------------------------------------------------------------*/
 	
-	$(".navbar-toggle").click(function() {
-		var position = $(".navbar-collapse").css('left'),
-			menu = $(".navbar-collapse"),
-			container = $(".main-content");
+	$('.navbar-toggle').click(function() {
+		var position = $('.navbar-collapse').css('left'),
+			menu = $('.navbar-collapse'),
+			container = $('.main-content');
 
-		if( position != "15px"){
-			container.animate({left: "200px"}, "fast");		  
-		 	menu.animate({left: "15px"}, "fast");
-			$(".navbar").animate({left: "200px"}, "fast");
-			//$("body").css("overflow","hidden");
+		if( position != '15px'){
+			container.animate({left: '230px'}, 'fast');		  
+		 	menu.animate({left: '15px'}, 'fast');
+			$('.navbar').animate({left: '230px'}, 'fast');
+			$('body').addClass('modal-open');
 		}else{
-			container.animate({left: "0px"}, "fast");		  
-		 	menu.animate({left: "-200px"}, "fast");
-			$(".navbar").animate({left: "0px"}, "fast");
-			//$( "body" ).css("overflow","auto");	
+			container.animate({left: '0px'}, 'fast');		  
+		 	menu.animate({left: '-230px'}, 'fast');
+			$('.navbar').animate({left: '0px'}, 'fast');
+			$('body').removeClass('modal-open');	
 		}
 	});
 
