@@ -10,12 +10,12 @@ jQuery(document).ready(function($) {
 	/*	Search Button
 	/*-----------------------------------------------------------------------------------*/
 
-	$("#open" ).click(function() {
-		$( ".search" ).slideToggle(200);
+	$('#open').click(function() {
+		$('.search').slideToggle(200);
 	});
 	
-	$("#close" ).click(function() {
-		$( ".search" ).slideToggle(200);
+	$('#close').click(function() {
+		$('.search').slideToggle(200);
 	});
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -46,12 +46,12 @@ jQuery(document).ready(function($) {
 		//$('.masonry').masonry('bindResize');
 	});
 
-	$("#load-more").click(function() {
+	$('#load-more').click(function() {
 	var $loadMore = $(this);
 	$loadMore.text('Loading...');
 		$.get('load-more.html', function( data ) {
 			var $moreBlocks = $(data).filter('div.box');
-			var $container = $("#primary");
+			var $container = $('#primary');
 			$container.append($moreBlocks);
 			$container.imagesLoaded( function() {
 				$container.masonry('appended', $moreBlocks);
@@ -80,49 +80,49 @@ jQuery(document).ready(function($) {
 	/*	Responsive Videos
 	/*-----------------------------------------------------------------------------------*/
 	
-	$(".video-widget").fitVids();
-	$(".media-content").fitVids();
-	$(".content").fitVids();
+	$('.video-widget').fitVids();
+	$('.media-content').fitVids();
+	$('.content').fitVids();
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Fix YouTube z-index bug
 	/*-----------------------------------------------------------------------------------*/
 
 	$('iframe').each(function() {
-        var url = $(this).attr("src");
-        $(this).attr("src",url+"?wmode=transparent");
+        var url = $(this).attr('src');
+        $(this).attr('src',url+'?wmode=transparent');
     });
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Boostrap Swipe
 	/*-----------------------------------------------------------------------------------*/
 
-	$("#slider").swiperight(function() {
-		$("#slider").carousel('prev');
+	$('#slider').swiperight(function() {
+		$('#slider').carousel('prev');
 	});
-	$("#slider").swipeleft(function() {
-		$("#slider").carousel('next');
+	$('#slider').swipeleft(function() {
+		$('#slider').carousel('next');
 	});
 	
-	$("#featured").swiperight(function() {
-		$("#featured").carousel('prev');
+	$('#featured').swiperight(function() {
+		$('#featured').carousel('prev');
 	});
-	$("#featured").swipeleft(function() {
-		$("#featured").carousel('next');
+	$('#featured').swipeleft(function() {
+		$('#featured').carousel('next');
 	});
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Preloader
 	/*-----------------------------------------------------------------------------------*/
 	
-	$("body").queryLoader2({
-        barColor: "#222222",
-        backgroundColor: "#ffffff",
+	/*$('body').queryLoader2({
+        barColor: '#222222',
+        backgroundColor: '#ffffff',
         percentage: true,
         barHeight: 3,
-        completeAnimation: "fade",
+        completeAnimation: 'fade',
         minimumTime: 200
-    });
+    });*/
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show dropdown on hover
@@ -206,13 +206,13 @@ jQuery(document).ready(function($) {
         	}else{
 				$html.removeClass('nav-side');
 				
-				$( ".main-content" ).animate({
-					left: "0",
-				}, "fast" );
+				$( '.main-content' ).animate({
+					left: '0',
+				}, 'fast' );
 			  
-				$( ".navbar-collapse" ).animate({
-					left: "-200px",
-				}, "fast" );
+				$( '.navbar-collapse' ).animate({
+					left: '-230px',
+				}, 'fast' );
         	}        
     	}).trigger('resize');
 	})(jQuery);
