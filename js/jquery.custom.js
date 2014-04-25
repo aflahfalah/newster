@@ -46,12 +46,24 @@ jQuery(document).ready(function($) {
 		//$('.masonry').masonry('bindResize');
 	});
 
+
+/*
 	$("#load-more").click(function() {
-	var $loadMore = $(this);
+	var $loadMore = $(this),
+		$moreBlocks = "",
+		$container = $("#primary");
+		$container.masonry( {
+		    itemSelector: 'div.box'
+		} );
+
+
 	$loadMore.text('Loading...');
 		$.get('load-more.html', function( data ) {
-			var $moreBlocks = $(data).filter('div.box');
-			var $container = $("#primary");
+			var data_test = '<div class="col-md-6 col-sm-6 box padding"> <div class="header"> <h2><a href="#">10 most improved teams after NHL trade deadline</a></h2> <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p> </div><!-- /.header --> <div class="image category4"> <h3 class="category-badge"><a href="#">Sports</a></h3> <a href="#"><img class="img-responsive" src="images/posts/post5.jpg" alt="Content Post" /></a> </div><p class="excerpt">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis...</p></div>';
+
+			console.log($(data).filter('div.box'))
+			//$moreBlocks = $(data).filter('div.box');
+			$moreBlocks = $(data_test);
 			$container.append($moreBlocks);
 			$container.imagesLoaded( function() {
 				$container.masonry('appended', $moreBlocks);
@@ -60,6 +72,59 @@ jQuery(document).ready(function($) {
 			                                    
 		});         
 	});
+
+*/
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	LoadMore
+	/*-----------------------------------------------------------------------------------*/
+	var $viewLoad = false,
+		$items = 0,
+		$currentItem = 0,
+		_data = "";
+
+	$("#load-more").click(function() {
+	var $loadMore = $(this),
+		$moreBlocks = "",
+		$container = $("#primary");
+
+		$loadMore.text('Loading...');//changes loading text
+
+		if ( !$viewLoad ){
+
+			$.get('load-more.php', function( data ) {
+				_data = data;
+				$items = $(data).length;
+
+				$moreBlocks = $(data[$currentItem]);
+				$container.append($moreBlocks);
+				$container.imagesLoaded( function() {
+					$container.masonry('appended', $moreBlocks);
+					$loadMore.text('Show More News');
+				}); 			                                    
+			}, "json");
+
+			$viewLoad = true;
+			$currentItem++;
+
+		}else{
+			if ( $currentItem < $items){
+				$moreBlocks = $(_data[$currentItem]);
+				$container.append($moreBlocks);
+				$container.imagesLoaded( function() {
+					$container.masonry('appended', $moreBlocks);
+					$loadMore.text('Show More News');
+				});
+				$currentItem++;
+
+			}else{
+				$loadMore.addClass('disabled').text('No More News');
+			}
+		}
+
+	});    
+
+
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Tooltips
