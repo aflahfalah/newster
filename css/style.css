@@ -439,7 +439,7 @@ textarea:focus {
 	left: 0;
 	border: 0;
 	width: 230px;
-	background: #666666;
+	background: #3f4a52;
 }
 
 .navbar-collapse.nav-side .navbar-nav {
@@ -502,6 +502,11 @@ textarea:focus {
 
 .navbar-toggle .icon-bar {
 	width: 16px;
+}
+
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus {
+	background: none
 }
 
 /* Side Buttons */
@@ -1124,6 +1129,7 @@ textarea:focus {
 }
 
 .sidebar .twitter-widget ul {
+	padding: 30px;
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1438,8 +1444,7 @@ label.error {
 	
 	.navbar-inverse .navbar-nav > li > a > span,
 	.carousel-caption .excerpt,
-	#slider .carousel-arrow,
-	#back-to-top {
+	#slider .carousel-arrow {
 		display: none;	
 	}
 	
@@ -1486,6 +1491,22 @@ label.error {
 	#primary .box .excerpt {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
+	}
+	
+	#back-to-top {
+		float: none !important;
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 10px;
+		width: 100%;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		color: #ffffff;
+	}
+	
+	#back-to-top span {
+		font-size: 14px
 	}
 	
 	.secondary-nav ul {
