@@ -10,12 +10,12 @@ jQuery(document).ready(function($) {
 	/*	Search Button
 	/*-----------------------------------------------------------------------------------*/
 
-	$("#open" ).click(function() {
-		$( ".search" ).slideToggle(200);
+	$('#open').click(function() {
+		$('.search').slideToggle(200);
 	});
 	
-	$("#close" ).click(function() {
-		$( ".search" ).slideToggle(200);
+	$('#close').click(function() {
+		$('.search').slideToggle(200);
 	});
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -46,6 +46,7 @@ jQuery(document).ready(function($) {
 		//$('.masonry').masonry('bindResize');
 	});
 
+<<<<<<< HEAD
 
 /*
 	$("#load-more").click(function() {
@@ -64,6 +65,14 @@ jQuery(document).ready(function($) {
 			console.log($(data).filter('div.box'))
 			//$moreBlocks = $(data).filter('div.box');
 			$moreBlocks = $(data_test);
+=======
+	$('#load-more').click(function() {
+	var $loadMore = $(this);
+	$loadMore.text('Loading...');
+		$.get('load-more.html', function( data ) {
+			var $moreBlocks = $(data).filter('div.box');
+			var $container = $('#primary');
+>>>>>>> 885242d2fd250bf8cdf2c80b3f19428e4277e91c
 			$container.append($moreBlocks);
 			$container.imagesLoaded( function() {
 				$container.masonry('appended', $moreBlocks);
@@ -145,49 +154,49 @@ jQuery(document).ready(function($) {
 	/*	Responsive Videos
 	/*-----------------------------------------------------------------------------------*/
 	
-	$(".video-widget").fitVids();
-	$(".media-content").fitVids();
-	$(".content").fitVids();
+	$('.video-widget').fitVids();
+	$('.media-content').fitVids();
+	$('.content').fitVids();
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Fix YouTube z-index bug
 	/*-----------------------------------------------------------------------------------*/
 
 	$('iframe').each(function() {
-        var url = $(this).attr("src");
-        $(this).attr("src",url+"?wmode=transparent");
+        var url = $(this).attr('src');
+        $(this).attr('src',url+'?wmode=transparent');
     });
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Boostrap Swipe
 	/*-----------------------------------------------------------------------------------*/
 
-	$("#slider").swiperight(function() {
-		$("#slider").carousel('prev');
+	$('#slider').swiperight(function() {
+		$('#slider').carousel('prev');
 	});
-	$("#slider").swipeleft(function() {
-		$("#slider").carousel('next');
+	$('#slider').swipeleft(function() {
+		$('#slider').carousel('next');
 	});
 	
-	$("#featured").swiperight(function() {
-		$("#featured").carousel('prev');
+	$('#featured').swiperight(function() {
+		$('#featured').carousel('prev');
 	});
-	$("#featured").swipeleft(function() {
-		$("#featured").carousel('next');
+	$('#featured').swipeleft(function() {
+		$('#featured').carousel('next');
 	});
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Preloader
 	/*-----------------------------------------------------------------------------------*/
 	
-	$("body").queryLoader2({
-        barColor: "#222222",
-        backgroundColor: "#ffffff",
+	/*$('body').queryLoader2({
+        barColor: '#222222',
+        backgroundColor: '#ffffff',
         percentage: true,
         barHeight: 3,
-        completeAnimation: "fade",
+        completeAnimation: 'fade',
         minimumTime: 200
-    });
+    });*/
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show dropdown on hover
@@ -204,8 +213,7 @@ jQuery(document).ready(function($) {
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-		  		//theElement.addClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -220,8 +228,7 @@ jQuery(document).ready(function($) {
 			if (theElement.hasClass('open')) return;
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
-			  	//theElement.addClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -230,11 +237,9 @@ jQuery(document).ready(function($) {
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-			  //theElement.removeClass('open');
-		  		if ($window.width() > 768) {
+		  		if ($window.width() > 767) {
 		  			theElement.removeClass('open');
 		  		}
-
 			}, delay);
 	  	});
 	})(jQuery, window, 200); // 200 is the delay in milliseconds
@@ -243,21 +248,21 @@ jQuery(document).ready(function($) {
 	/*	Toggle
 	/*-----------------------------------------------------------------------------------*/
 	
-	$(".navbar-toggle").click(function() {
-		var position = $(".navbar-collapse").css('left'),
-			menu = $(".navbar-collapse"),
-			container = $( ".main-content" );
+	$('.navbar-toggle').click(function() {
+		var position = $('.navbar-collapse').css('left'),
+			menu = $('.navbar-collapse'),
+			container = $('.main-content');
 
-		if( position != "15px"){
-			container.animate({left: "200px"}, "fast");		  
-		 	menu.animate({left: "15px"}, "fast");
-			$(".navbar").animate({left: "200px"}, "fast");
-			$("body").css("overflow-y","hidden");
+		if( position != '15px'){
+			container.animate({left: '230px'}, 'fast');		  
+		 	menu.animate({left: '15px'}, 'fast');
+			$('.navbar').animate({left: '230px'}, 'fast');
+			$('body').addClass('modal-open');
 		}else{
-			container.animate({left: "0px"}, "fast");		  
-		 	menu.animate({left: "-200px"}, "fast");
-			$(".navbar").animate({left: "0px"}, "fast");
-			$( "body" ).css("overflow-y","auto");	
+			container.animate({left: '0px'}, 'fast');		  
+		 	menu.animate({left: '-230px'}, 'fast');
+			$('.navbar').animate({left: '0px'}, 'fast');
+			$('body').removeClass('modal-open');	
 		}
 	});
 
@@ -270,18 +275,18 @@ jQuery(document).ready(function($) {
         	$html = $('.navbar-collapse');
 
     	$window.resize(function resize() {
-        	if ($window.width() < 768) {
-           		return $html.addClass('nav-stacked');           		
+        	if ($window.width() < 767) {
+           		return $html.addClass('nav-side');           		
         	}else{
-				$html.removeClass('nav-stacked');
+				$html.removeClass('nav-side');
 				
-				$( ".main-content" ).animate({
-					left: "0",
-				}, "fast" );
+				$( '.main-content' ).animate({
+					left: '0',
+				}, 'fast' );
 			  
-				$( ".navbar-collapse" ).animate({
-					left: "-200px",
-				}, "fast" );
+				$( '.navbar-collapse' ).animate({
+					left: '-230px',
+				}, 'fast' );
         	}        
     	}).trigger('resize');
 	})(jQuery);
