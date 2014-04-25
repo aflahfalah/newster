@@ -46,47 +46,10 @@ jQuery(document).ready(function($) {
 		//$('.masonry').masonry('bindResize');
 	});
 
-<<<<<<< HEAD
-
-/*
-	$("#load-more").click(function() {
-	var $loadMore = $(this),
-		$moreBlocks = "",
-		$container = $("#primary");
-		$container.masonry( {
-		    itemSelector: 'div.box'
-		} );
-
-
-	$loadMore.text('Loading...');
-		$.get('load-more.html', function( data ) {
-			var data_test = '<div class="col-md-6 col-sm-6 box padding"> <div class="header"> <h2><a href="#">10 most improved teams after NHL trade deadline</a></h2> <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p> </div><!-- /.header --> <div class="image category4"> <h3 class="category-badge"><a href="#">Sports</a></h3> <a href="#"><img class="img-responsive" src="images/posts/post5.jpg" alt="Content Post" /></a> </div><p class="excerpt">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis...</p></div>';
-
-			console.log($(data).filter('div.box'))
-			//$moreBlocks = $(data).filter('div.box');
-			$moreBlocks = $(data_test);
-=======
-	$('#load-more').click(function() {
-	var $loadMore = $(this);
-	$loadMore.text('Loading...');
-		$.get('load-more.html', function( data ) {
-			var $moreBlocks = $(data).filter('div.box');
-			var $container = $('#primary');
->>>>>>> 885242d2fd250bf8cdf2c80b3f19428e4277e91c
-			$container.append($moreBlocks);
-			$container.imagesLoaded( function() {
-				$container.masonry('appended', $moreBlocks);
-				$loadMore.text('Show More News');
-			}); 
-			                                    
-		});         
-	});
-
-*/
-
 	/*-----------------------------------------------------------------------------------*/
 	/*	LoadMore
 	/*-----------------------------------------------------------------------------------*/
+	
 	var $viewLoad = false,
 		$items = 0,
 		$currentItem = 0,
@@ -132,8 +95,6 @@ jQuery(document).ready(function($) {
 		}
 
 	});    
-
-
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Tooltips
