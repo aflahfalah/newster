@@ -53,32 +53,29 @@ jQuery(document).ready(function($) {
 	var $viewLoad = false,
 		$items = 0,
 		$currentItem = 0,
-		_data = "";
+		_data = '';
 
-	$("#load-more").click(function() {
-	var $loadMore = $(this),
-		$moreBlocks = "",
-		$container = $("#primary");
+	$('#load-more').click(function() {
+		var $loadMore = $(this),
+			$moreBlocks = '',
+			$container = $('#primary');
 
-		$loadMore.text('Loading...');//changes loading text
+		$loadMore.text('Loading...');
 
-		if ( !$viewLoad ){
-
+		if (!$viewLoad){
 			$.get('load-more.php', function( data ) {
 				_data = data;
 				$items = $(data).length;
-
 				$moreBlocks = $(data[$currentItem]);
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
 					$loadMore.text('Show More News');
 				}); 			                                    
-			}, "json");
+			}, 'json');
 
 			$viewLoad = true;
 			$currentItem++;
-
 		}else{
 			if ( $currentItem < $items){
 				$moreBlocks = $(_data[$currentItem]);
@@ -88,12 +85,10 @@ jQuery(document).ready(function($) {
 					$loadMore.text('Show More News');
 				});
 				$currentItem++;
-
 			}else{
 				$loadMore.addClass('disabled').text('No More News');
 			}
 		}
-
 	});    
 
 	/*-----------------------------------------------------------------------------------*/
@@ -170,7 +165,7 @@ jQuery(document).ready(function($) {
 			$window = $(window);
 
 	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
-			if (theElement) theElement.removeClass('open');
+			//if (theElement) theElement.removeClass('open');
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
