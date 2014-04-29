@@ -171,8 +171,9 @@ jQuery(document).ready(function($) {
 			theLastPosition = {x:0,y:0},
 			$window = $(window);
 
+
 	  	$('.navbar-nav').find('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
-			//if (theElement) theElement.removeClass('open');
+
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
