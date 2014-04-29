@@ -93,13 +93,10 @@ jQuery(document).ready(function($) {
 				});
 				$currentItem = $currentItem + 2;
 
-				//disabled button
 				if( $currentItem >= $items){
 					$loadMore.addClass('disabled').text('No More News');
 				}
-			}/*else{
-				$loadMore.addClass('disabled').text('No More News');
-			}*/
+			}
 		}
 	});    
 
@@ -114,7 +111,7 @@ jQuery(document).ready(function($) {
 	/*-----------------------------------------------------------------------------------*/
 	
 	$('#back-to-top').click(function(){
-		$('html, body').animate({scrollTop: '0px'}, 500);
+		$('html, body').animate({scrollTop: '0'}, 500);
 		return false;
 	});
 	
@@ -176,13 +173,11 @@ jQuery(document).ready(function($) {
 			theLastPosition = {x:0,y:0},
 			$window = $(window);
 
-
 	  	$('.navbar-nav').find('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
-
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-		  		if ($window.width() > 767) {
+		  		if ($window.width() > 768) {
 		  			if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
@@ -198,7 +193,7 @@ jQuery(document).ready(function($) {
 			if (theElement.hasClass('open')) return;
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
-		  		if ($window.width() > 767) {
+		  		if ($window.width() > 768) {
 		  			if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
@@ -208,7 +203,7 @@ jQuery(document).ready(function($) {
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
-		  		if ($window.width() > 767) {
+		  		if ($window.width() > 768) {
 		  			if (theElement) theElement.removeClass('open');
 		  			theElement.removeClass('open');
 		  		}
@@ -245,7 +240,7 @@ jQuery(document).ready(function($) {
         	$html = $('.navbar-collapse');
 
     	$window.resize(function resize() {
-        	if ($window.width() < 767) {
+        	if ($window.width() < 768) {
            		return $html.addClass('nav-side');           		
         	}else{
 				$html.removeClass('nav-side');
