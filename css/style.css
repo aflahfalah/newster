@@ -33,6 +33,7 @@
 body {
 	background: url(../images/background.gif);
 	font-family: 'Roboto', sans-serif;
+	position: relative;
 }
 
 a,
@@ -440,7 +441,8 @@ textarea:focus {
 	border: 0;
 	padding: 0;
 	width: 230px;
-	background: #333;
+	background: #333333;
+	border-right: 1px solid #444444;
 }
 
 .navbar-collapse.nav-side .navbar-nav {
@@ -1306,6 +1308,10 @@ textarea:focus {
 }
 
 /* Footer */
+
+.footer-wrap {
+	margin: -1px;
+}
 
 .footer {
 	color: #999999;

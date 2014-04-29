@@ -207,18 +207,16 @@ jQuery(document).ready(function($) {
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left'),
 			menu = $('.navbar-collapse'),
-			container = $('.main-content');
-
+			container = $('body');
+			
 		if( position != '15px'){
-			container.animate({left: '230px'}, 'fast');		  
+			container.animate({left: '230px'}, 'fast').addClass('modal-open');	
 		 	menu.animate({left: '15px'}, 'fast');
 			$('.navbar').animate({left: '230px'}, 'fast');
-			$('body').addClass('modal-open');
 		}else{
-			container.animate({left: '0px'}, 'fast');		  
+			container.animate({left: '0'}, 'fast').removeClass('modal-open');	 
 		 	menu.animate({left: '-230px'}, 'fast');
-			$('.navbar').animate({left: '0px'}, 'fast');
-			$('body').removeClass('modal-open');	
+			$('.navbar').animate({left: '0'}, 'fast');	
 		}
 	});
 
