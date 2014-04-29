@@ -170,6 +170,7 @@ jQuery(document).ready(function($) {
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 767) {
+		  			if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -185,6 +186,7 @@ jQuery(document).ready(function($) {
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 767) {
+		  			if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -194,6 +196,7 @@ jQuery(document).ready(function($) {
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 767) {
+		  			if (theElement) theElement.removeClass('open');
 		  			theElement.removeClass('open');
 		  		}
 			}, delay);
