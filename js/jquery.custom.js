@@ -53,32 +53,29 @@ jQuery(document).ready(function($) {
 	var $viewLoad = false,
 		$items = 0,
 		$currentItem = 0,
-		_data = "";
+		_data = '';
 
-	$("#load-more").click(function() {
-	var $loadMore = $(this),
-		$moreBlocks = "",
-		$container = $("#primary");
+	$('#load-more').click(function() {
+		var $loadMore = $(this),
+			$moreBlocks = '',
+			$container = $('#primary');
 
-		$loadMore.text('Loading...');//changes loading text
+		$loadMore.text('Loading...');
 
-		if ( !$viewLoad ){
-
+		if (!$viewLoad){
 			$.get('load-more.php', function( data ) {
 				_data = data;
 				$items = $(data).length;
-
 				$moreBlocks = $(data[$currentItem]);
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
 					$loadMore.text('Show More News');
 				}); 			                                    
-			}, "json");
+			}, 'json');
 
 			$viewLoad = true;
 			$currentItem++;
-
 		}else{
 			if ( $currentItem < $items){
 				$moreBlocks = $(_data[$currentItem]);
@@ -88,12 +85,10 @@ jQuery(document).ready(function($) {
 					$loadMore.text('Show More News');
 				});
 				$currentItem++;
-
 			}else{
 				$loadMore.addClass('disabled').text('No More News');
 			}
 		}
-
 	});    
 
 	/*-----------------------------------------------------------------------------------*/
@@ -170,7 +165,7 @@ jQuery(document).ready(function($) {
 			$window = $(window);
 
 	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
-			if (theElement) theElement.removeClass('open');
+			//if (theElement) theElement.removeClass('open');
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
@@ -212,18 +207,16 @@ jQuery(document).ready(function($) {
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left'),
 			menu = $('.navbar-collapse'),
-			container = $('.main-content');
-
+			container = $('body');
+			
 		if( position != '15px'){
-			container.animate({left: '230px'}, 'fast');		  
+			container.animate({left: '230px'}, 'fast').addClass('modal-open');	
 		 	menu.animate({left: '15px'}, 'fast');
 			$('.navbar').animate({left: '230px'}, 'fast');
-			$('body').addClass('modal-open');
 		}else{
-			container.animate({left: '0px'}, 'fast');		  
+			container.animate({left: '0'}, 'fast').removeClass('modal-open');	 
 		 	menu.animate({left: '-230px'}, 'fast');
-			$('.navbar').animate({left: '0px'}, 'fast');
-			$('body').removeClass('modal-open');	
+			$('.navbar').animate({left: '0'}, 'fast');	
 		}
 	});
 

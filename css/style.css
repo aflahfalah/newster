@@ -33,6 +33,7 @@
 body {
 	background: url(../images/background.gif);
 	font-family: 'Roboto', sans-serif;
+	position: relative;
 }
 
 a,
@@ -438,24 +439,26 @@ textarea:focus {
 	top: 0;
 	left: 0;
 	border: 0;
+	padding: 0;
 	width: 230px;
-	background: #3f4a52;
+	background: #333333;
+	border-right: 1px solid #444444;
 }
 
 .navbar-collapse.nav-side .navbar-nav {
-	margin: 50px 10px;
+	margin: 50px 30px;
 }
 
 .navbar-collapse.nav-side .dropdown-menu {
 	background: none !important;
-	padding-top: 0 !important
+	padding: 0 !important
 }
 
 .navbar-collapse.nav-side .multi-level > li,
 .navbar-collapse.nav-side .multi-level > li:last-child {
 	border-right: 0;
 	border-left: 0;
-	border-bottom: 1px solid #777777;
+	border-bottom: 1px solid #444444;
 }
 
 .navbar-collapse.nav-side .multi-level > li > a {
@@ -464,25 +467,18 @@ textarea:focus {
 	padding: 0;
 }
 
-.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu>li>a, 
-.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu .dropdown-header {
+.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu>li>a {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.navbar-collapse.nav-side .dropdown-submenu > a:after {
+.navbar-collapse.nav-side .dropdown-submenu ul {
     display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 4px 4px 0 4px;
-    border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
-    margin-top: 6px;
-    margin-right: 0;
+	margin-left: 10px !important
+}
+
+.navbar-collapse.nav-side .dropdown-submenu > a:after {
+    display: none;
 }
 
 /* Navbar Toggle */
@@ -1313,6 +1309,10 @@ textarea:focus {
 
 /* Footer */
 
+.footer-wrap {
+	margin: -1px;
+}
+
 .footer {
 	color: #999999;
 	background: #222222;
@@ -1444,7 +1444,8 @@ label.error {
 	
 	.navbar-inverse .navbar-nav > li > a > span,
 	.carousel-caption .excerpt,
-	#slider .carousel-arrow {
+	#slider .carousel-arrow,
+	#back-to-top span {
 		display: none;	
 	}
 	
@@ -1458,19 +1459,19 @@ label.error {
 	}	
 	
 	.search input {
-		font-size: 20px
+		font-size: 20px;
 	}
 	
 	.navbar-inverse .navbar-header {
-		margin-left: -15px
+		margin-left: -15px;
 	}
 	
 	.main-content {
-		margin-top: 69px
+		margin-top: 69px;
 	}
 	
 	#slider .carousel-caption {
-		width: 100%
+		width: 100%;
 	}
 	
 	#slider .carousel-caption h1 {
@@ -1505,27 +1506,22 @@ label.error {
 		color: #ffffff;
 	}
 	
-	#back-to-top span {
-		font-size: 14px
-	}
-	
 	.secondary-nav ul {
 		text-align: center;
-		width: 100%
+		width: 100%;
 	}
 	
 	.copyright p {
 		width: 100%;
 		margin: 0;
-		text-align: center
+		text-align: center;
 	}
 	
 	.copyright ul {
 		width: 100%;
 		text-align: center;
 		margin-top: 10px;
-		font-size: 24px
-		
+		font-size: 24px;
 	}
 	
 	/* Post */
