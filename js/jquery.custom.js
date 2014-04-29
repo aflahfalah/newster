@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 				$currentItem = $currentItem + 2;
 
 				if( $currentItem >= $items){
-					$loadMore.addClass('disabled').text('No More News');
+					$loadMore.addClass('disabled');
 				}
 			}
 		}
@@ -228,14 +228,16 @@ jQuery(document).ready(function($) {
     	var $window = $(window),
         	$html = $('.navbar-collapse');
 
-    	$window.resize(function resize() {
+    	$window.resize(function resize() {           		
+
         	if ($window.width() < 768) {
-           		return $html.addClass('nav-side');           		
+        		$('.navbar-collapse').animate({left: '-230',}, 'fast');
+           		return $html.addClass('nav-side');           		           		
         	}else{
-				$html.removeClass('nav-side');
-				
-				$('body').animate({left: '0',}, 'fast');
-				$('.navbar-collapse').animate({left: '-230px',}, 'fast');
+
+				$html.removeClass('nav-side');				
+				$('.main-content').animate({left: '0',}, 'fast');
+				$('.navbar').animate({left: '0',}, 'fast');
         	}        
     	}).trigger('resize');
 	})(jQuery);
