@@ -92,9 +92,14 @@ jQuery(document).ready(function($) {
 					$loadMore.text('Show More News');
 				});
 				$currentItem = $currentItem + 2;
-			}else{
+
+				//disabled button
+				if( $currentItem >= $items){
+					$loadMore.addClass('disabled').text('No More News');
+				}
+			}/*else{
 				$loadMore.addClass('disabled').text('No More News');
-			}
+			}*/
 		}
 	});    
 
