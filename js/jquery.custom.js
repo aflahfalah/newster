@@ -171,14 +171,14 @@ jQuery(document).ready(function($) {
 			theLastPosition = {x:0,y:0},
 			$window = $(window);
 
-<<<<<<< HEAD
+
 	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
 			//if (theElement) theElement.removeClass('open');
-=======
+
 
 	  	$('.navbar-nav').find('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
 
->>>>>>> 79dea4f4b778aca01a7fef8b9d74f3c3fcbf3fa9
+
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
