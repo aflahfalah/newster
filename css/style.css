@@ -33,7 +33,6 @@
 body {
 	background: url(../images/background.gif);
 	font-family: 'Roboto', sans-serif;
-	position: relative;
 }
 
 a,
@@ -438,6 +437,7 @@ textarea:focus {
 	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
 	border: 0;
 	padding: 0;
 	width: 230px;
@@ -467,9 +467,13 @@ textarea:focus {
 	padding: 0;
 }
 
-.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu>li>a {
+.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu >li > a {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.navbar-collapse.nav-side .dropdown-submenu:last-child {
+	padding-bottom: 15px 
 }
 
 .navbar-collapse.nav-side .dropdown-submenu ul {
@@ -1316,7 +1320,7 @@ textarea:focus {
 /* Footer */
 
 .footer-wrap {
-
+	margin: 0 -1px -1px -1px;
 }
 
 .footer {

@@ -151,19 +151,6 @@ jQuery(document).ready(function($) {
 	});
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Preloader
-	/*-----------------------------------------------------------------------------------*/
-	
-	/*$('body').queryLoader2({
-        barColor: '#222222',
-        backgroundColor: '#ffffff',
-        percentage: true,
-        barHeight: 3,
-        completeAnimation: 'fade',
-        minimumTime: 200
-    });*/
-	
-	/*-----------------------------------------------------------------------------------*/
 	/*	Show dropdown on hover
 	/*-----------------------------------------------------------------------------------*/
 	
@@ -218,16 +205,18 @@ jQuery(document).ready(function($) {
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left'),
 			menu = $('.navbar-collapse'),
-			container = $('body');
+			container = $('.main-content');
 			
 		if( position != '15px'){
-			container.animate({left: '230px'}, 'fast').addClass('modal-open');	
+			container.animate({left: '230px'}, 'fast');
 		 	menu.animate({left: '15px'}, 'fast');
 			$('.navbar').animate({left: '230px'}, 'fast');
+			$('body').addClass('modal-open');	
 		}else{
-			container.animate({left: '0'}, 'fast').removeClass('modal-open');	 
+			container.animate({left: '0'}, 'fast');	 
 		 	menu.animate({left: '-230px'}, 'fast');
 			$('.navbar').animate({left: '0'}, 'fast');	
+			$('body').removeClass('modal-open');
 		}
 	});
 
@@ -245,13 +234,8 @@ jQuery(document).ready(function($) {
         	}else{
 				$html.removeClass('nav-side');
 				
-				$( '.main-content' ).animate({
-					left: '0',
-				}, 'fast' );
-			  
-				$( '.navbar-collapse' ).animate({
-					left: '-230px',
-				}, 'fast' );
+				$('body').animate({left: '0',}, 'fast');
+				$('.navbar-collapse').animate({left: '-230px',}, 'fast');
         	}        
     	}).trigger('resize');
 	})(jQuery);
