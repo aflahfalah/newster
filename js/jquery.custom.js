@@ -165,7 +165,6 @@ jQuery(document).ready(function($) {
 			$window = $(window);
 
 	  	$('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
-			//if (theElement) theElement.removeClass('open');
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
