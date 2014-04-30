@@ -163,7 +163,6 @@ jQuery(document).ready(function($) {
 			theElement = null,
 			theLastPosition = {x:0,y:0},
 			$window = $(window);
-
 	  	$('.navbar-nav').find('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {	  		
 			window.clearTimeout(theTimer);
 			theElement = $(this);
@@ -207,18 +206,15 @@ jQuery(document).ready(function($) {
 	/*-----------------------------------------------------------------------------------*/
 	
 	$('.navbar-toggle').click(function() {
-		var position = $('.navbar-collapse').css('left'),
-			menu = $('.navbar-collapse'),
-			container = $('.main-content');
-			
+		var position = $('.navbar-collapse').css('left');
 		if( position != '15px'){
-			container.animate({left: '230px'}, 'fast');
-		 	menu.animate({left: '15px'}, 'fast');
+			$('.main-content').animate({left: '230px'}, 'fast');
+		 	$('.navbar-collapse').animate({left: '15px'}, 'fast');
 			$('.navbar').animate({left: '230px'}, 'fast');
 			$('body').addClass('modal-open');	
 		}else{
-			container.animate({left: '0'}, 'fast');	 
-		 	menu.animate({left: '-230px'}, 'fast');
+			$('.main-content').animate({left: '0'}, 'fast');	 
+		 	$('.navbar-collapse').animate({left: '-230px'}, 'fast');
 			$('.navbar').animate({left: '0'}, 'fast');	
 			$('body').removeClass('modal-open');
 		}
@@ -231,15 +227,12 @@ jQuery(document).ready(function($) {
 	(function($) {
     	var $window = $(window),
         	$html = $('.navbar-collapse');
-
     	$window.resize(function resize() {      		
-
         	if ($window.width() < 768) {
-           		$html.addClass('nav-side');           		           		
+           		$('.navbar-collapse').addClass('nav-side');           		           		
         	}else{
-
         		$('.navbar-collapse').animate({left: '-230',}, 'fast').css('display','block');
-				$html.removeClass('nav-side');				
+				$('.navbar-collapse').removeClass('nav-side');				
 				$('.main-content').animate({left: '0',}, 'fast');
 				$('.navbar').animate({left: '0',}, 'fast');
 				$('body').removeClass('modal-open');
