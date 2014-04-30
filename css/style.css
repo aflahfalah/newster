@@ -56,6 +56,17 @@ textarea:focus {
     outline: 0;
 }
 
+#featured h2 a:hover,
+#primary .box h2 a:hover,
+.tab-content h5 a:hover,
+.sidebar .twitter-widget a,
+.content a,
+.author a,
+.footer p a:hover,
+.footer .twitter-widget ul li a:hover  {
+    color: #009bff;
+}
+
 .form-control {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -159,17 +170,6 @@ textarea:focus {
 /*-----------------------------------------------------------------------------------*/
 /*	1.	Set Categoty Colors
 /*-----------------------------------------------------------------------------------*/
-
-.home #featured h2 a:hover,
-.home #primary .box h2 a:hover,
-.home .tab-content h5 a:hover,
-.home .sidebar .twitter-widget a,
-.home .content a,
-.home .author a,
-.home .footer p a:hover,
-.home .footer .twitter-widget ul li a:hover  {
-    color: #009bff;
-}
 
 #slider .carousel-arrow a:hover,
 .box .home a,
@@ -1150,18 +1150,18 @@ textarea:focus {
 }
 
 .sidebar .twitter-widget ul li .date a {
-	color: #999999
+	color: #999999;
 }
 
 .sidebar .twitter-widget ul li .date a:hover {
-	color: #333333
+	color: #333333;
 }
 
 .sidebar .twitter-widget .twitter-bird {
 	height: 31px;
 	width: 63px;
 	margin-top: -11px;
-	background: url(../images/twitter-bird.png)
+	background: url(../images/twitter-bird.png);
 }
 
 .sidebar .twitter-widget .twitter-url {
@@ -1174,15 +1174,15 @@ textarea:focus {
 }
 
 .footer .twitter-widget ul li a {
-	color: #ffffff
+	color: #ffffff;
 }
 
 .footer .twitter-widget ul li .date a {
-	color: #666666
+	color: #666666;
 }
 
 .footer .twitter-widget ul li .date a:hover {
-	color: #ffffff
+	color: #ffffff;
 }
 
 .footer .twitter-widget .twitter-bird {
@@ -1216,30 +1216,25 @@ textarea:focus {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-8 */
 }
 
-.nav-tabs.nav-justified > li {
-	display: table-cell;
-	width: 1%;
+.nav-tabs > li {
+	width: 33.3%;
+	text-align: center;
 }
 
-.nav-tabs.nav-justified > li > a {
-	border-right: 1px solid #DDDDDD;
+.nav-tabs > li > a {
+	border-right: 1px solid #DDDDDD !important;
+	border-left: 0 !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
 	color: #333333;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-	margin-bottom: -1px;
+	margin-right: 0;
 }
 
-.nav-tabs.nav-justified > li:last-child > a{
-	border-right: 0
-}
-
-.nav-tabs.nav-justified > .active > a, 
-.nav-tabs.nav-justified > .active > a:hover, 
-.nav-tabs.nav-justified > .active > a:focus {
-	border-left: 0;
-	border-top: 0;
+.nav-tabs > li:last-child > a {
+	border-right: 0 !important;
 }
 
 .tab-content ul {
