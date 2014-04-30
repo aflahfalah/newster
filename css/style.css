@@ -90,8 +90,8 @@ textarea:focus {
 	background-color: #FFFFFF;
     border: 1px solid #cccccc;
 	-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.15);
-	-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.15);
-	box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.15);	
+	-moz-box-shadow: 	0px 1px 5px rgba(50, 50, 50, 0.15);
+	box-shadow: 		0px 1px 5px rgba(50, 50, 50, 0.15);	
 }
 
 /*.image img {
@@ -1471,11 +1471,7 @@ label.error {
 	.search input {
 		font-size: 20px;
 	}
-	
-	.navbar-inverse .navbar-header {
-		margin-left: -15px;
-	}
-	
+
 	.main-content {
 		margin-top: 69px;
 	}
