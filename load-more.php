@@ -55,11 +55,9 @@
 
   $array = array();
   for ($x = 0; $x < count($posts); $x++){
-    $array[] = $posts[$x];
+    $array[$x] = $posts[$x];
   }
 
-  //Respuesta en Formato JSON  
-  //$returnArray = Array('post' => $post_1);
   $returnArray = $array;
   print json_encode($returnArray);
 

@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
 	var $viewLoad = false,
 		$items = 0,
 		$currentItem = 0,
-		_data = '';
+		post = '';
 
 	$('#load-more').click(function() {
 		var $loadMore = $(this),
@@ -64,38 +64,42 @@ jQuery(document).ready(function($) {
 
 		if (!$viewLoad){
 			$.get('load-more.php', function( data ) {
-				_data = data;
+				post = data;
+
+				console.log($currentItem)
+
 				$items = $(data).length;
-				$moreBlocks = $(data[$currentItem] + data[$currentItem + 1]);
+				//$moreBlocks = $(post[$currentItem]);
+				$moreBlocks = $(post[$currentItem] + post[$currentItem + 1]);
 
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
 					$loadMore.text('Show More News');
 				}); 			                                    
-			}, 'json');
-
-			$viewLoad = true;
-			$currentItem = $currentItem + 2;
-
+			}, 'json').done(function(){
+				$viewLoad = true;
+				$currentItem = $currentItem + 2;
+			});
 		}else{
 			if ( $currentItem < $items){
-				if( _data[$currentItem + 1] ){
-					$moreBlocks = $(_data[$currentItem] + _data[$currentItem + 1]);
+				if( post[$currentItem + 1] ){
+					$moreBlocks = $(post[$currentItem] + post[$currentItem + 1]);
 				}else{
-					$moreBlocks = $(_data[$currentItem]);
+					$moreBlocks = $(post[$currentItem]);
 				}
 				
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
 					$loadMore.text('Show More News');
-				});
-				$currentItem = $currentItem + 2;
+				})
 
+				$currentItem = $currentItem + 2;
 				if( $currentItem >= $items){
 					$loadMore.addClass('disabled');
 				}
+
 			}
 		}
 	});    
