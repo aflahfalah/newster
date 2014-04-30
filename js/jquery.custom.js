@@ -242,6 +242,7 @@ jQuery(document).ready(function($) {
 				$html.removeClass('nav-side');				
 				$('.main-content').animate({left: '0',}, 'fast');
 				$('.navbar').animate({left: '0',}, 'fast');
+				$('body').removeClass('modal-open');
         	}        
     	}).trigger('resize');
 	})(jQuery);
