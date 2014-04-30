@@ -231,7 +231,8 @@ jQuery(document).ready(function($) {
     	$window.resize(function resize() {           		
 
         	if ($window.width() < 768) {
-        		$('.navbar-collapse').animate({left: '-230',}, 'fast');
+        		$('.navbar-collapse').animate({left: '-230',}, 'fast').css('display','block');
+
            		return $html.addClass('nav-side');           		           		
         	}else{
 
