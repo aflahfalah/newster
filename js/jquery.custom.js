@@ -232,14 +232,13 @@ jQuery(document).ready(function($) {
     	var $window = $(window),
         	$html = $('.navbar-collapse');
 
-    	$window.resize(function resize() {           		
+    	$window.resize(function resize() {      		
 
         	if ($window.width() < 768) {
-        		$('.navbar-collapse').animate({left: '-230',}, 'fast').css('display','block');
-
-           		return $html.addClass('nav-side');           		           		
+           		$html.addClass('nav-side');           		           		
         	}else{
 
+        		$('.navbar-collapse').animate({left: '-230',}, 'fast').css('display','block');
 				$html.removeClass('nav-side');				
 				$('.main-content').animate({left: '0',}, 'fast');
 				$('.navbar').animate({left: '0',}, 'fast');
