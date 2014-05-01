@@ -163,16 +163,13 @@ jQuery(document).ready(function($) {
 			theLastPosition = {x:0,y:0},
 			$window = $(window);
 	  	$('.navbar-nav').find('[data-toggle]').closest('li').on('mouseenter', function (inEvent) {
-
 	  		if ($window.width() > 768) {
 		  		if (theElement) theElement.removeClass('open');		  			
 		  	}
-
 			window.clearTimeout(theTimer);
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 768) {
-		  			//if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -188,7 +185,6 @@ jQuery(document).ready(function($) {
 				window.clearTimeout(theTimer);
 				theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 768) {
-		  			//if (theElement) theElement.removeClass('open');
 		  			theElement.addClass('open');
 		  		}
 			}, delay);
@@ -198,7 +194,6 @@ jQuery(document).ready(function($) {
 			theElement = $(this);
 			theTimer = window.setTimeout(function () {
 		  		if ($window.width() > 768) {
-		  			//if (theElement) theElement.removeClass('open');
 		  			theElement.removeClass('open');
 		  		}
 			}, delay);
