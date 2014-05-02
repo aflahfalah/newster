@@ -63,7 +63,9 @@ textarea:focus {
 .content a,
 .author a,
 .footer p a:hover,
-.footer .twitter-widget ul li a:hover  {
+.footer .twitter-widget ul li a:hover,
+.copyright a:hover,
+.meta h2 a:hover {
     color: #009bff;
 }
 
@@ -1048,6 +1050,7 @@ textarea:focus {
     display: block;
     padding: 25px;
     text-align: center;
+	color: #FFFFFF;
 }
 
 .social-widget .info {
@@ -1059,9 +1062,8 @@ textarea:focus {
     color: #FFFFFF;
     display: block;
     font-family: 'Montserrat',sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 3px;
 }
 
 .social-widget .title {
@@ -1074,35 +1076,28 @@ textarea:focus {
 	opacity: 0.7; 
 }
 
-.social-widget .rss-count .icon {
-    background: #F97410;
-    color: #FFFFFF;
+.social-widget .facebook-count .icon {
+    background: #3B5998;
 }
 
-.social-widget .rss-count .info {
-    background: #F78834;
+.social-widget .facebook-count .info {
+    background: #4B6498;
 }
 
 .social-widget .twitter-count .icon {
     background: #1DB4F1;
-    color: #FFFFFF;
-    display: block;
-    text-align: center;
 }
 
 .social-widget .twitter-count .info {
     background: #3CC0F6;
 }
 
-.social-widget .facebook-count .icon {
-    background: #3B5998;
-    color: #FFFFFF;
-    display: block;
-    text-align: center;
+.social-widget .rss-count .icon {
+    background: #F97410;
 }
 
-.social-widget .facebook-count .info {
-    background: #4B6498;
+.social-widget .rss-count .info {
+    background: #F78834;
 }
 
 /* Twitter Widget */
@@ -1200,7 +1195,7 @@ textarea:focus {
 }
 
 .nav-tabs > li {
-	width: 33.3%;
+	width: 33.33333333%;
 	text-align: center;
 }
 
