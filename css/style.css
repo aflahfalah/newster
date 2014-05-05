@@ -166,7 +166,7 @@ textarea:focus {
 }
 
 .date a:hover {
-    color: #333333;
+    color: #333333 !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -556,9 +556,7 @@ textarea:focus {
 
 .left-content {
 	background-color: #ffffff;
-	border-top: 1px solid #bbbbbb;
-	border-left: 1px solid #bbbbbb;
-	border-right: 1px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	padding: 0;
 	margin: -20px -1px 0 -1px;
 	-webkit-box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.2);
@@ -757,7 +755,6 @@ textarea:focus {
 
 .navigation {
 	border-top: 1px solid #cccccc;
-	border-bottom: 1px solid #cccccc;
 	background: #ffffff;
 }
 
@@ -769,20 +766,12 @@ textarea:focus {
 	margin: -1px;
 }
 
-.main-title {
-	padding-bottom: 0 !important;
-}
-
 .main-title h1 {
-	margin: 0;
 	font-family: 'Montserrat',sans-serif;
 	letter-spacing: -1px;
 	font-weight: bold;
-}
-
-.main-title .date {
-	margin-top: 25px;
-	margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 25px;
 }
 
 .content h1,
@@ -827,6 +816,20 @@ textarea:focus {
     font-size: 11px;
     text-transform: uppercase;
 	display: block;
+	margin-top: 5px;
+}
+
+.content .share-buttons {
+	margin-bottom: 0;
+}
+
+.content .share-buttons a {
+	color: #999;
+    font-size: 18px;
+}
+
+.content .share-buttons a:hover {
+	color: #999999;
 }
 
 /* Author / Related Posts */
@@ -865,7 +868,7 @@ textarea:focus {
 	margin-bottom: 0;
 }
 
-.meta .box {
+/*.meta .box {
 	background: url(../images/separator.png) repeat-y right top;
 }
 
@@ -879,7 +882,7 @@ textarea:focus {
 	-moz-opacity: 0.7;
 	-khtml-opacity: 0.7;
 	opacity: 0.7; 
-}
+}*/
 
 .meta h2 {
 	margin-top: 10px;
@@ -902,19 +905,20 @@ textarea:focus {
 	margin-top: 0;
 	margin-bottom: 30px;
 	padding-bottom: 15px;
-	border-bottom: 1px dotted #CCCCCC
+	border-bottom: 1px dotted #CCCCCC;
 }
 
 #comments ul {
-	list-style: none
+	list-style: none;
+	padding-left: 30px;
 }
 
 .comment-header {
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 
 .comment-header .image {
-	margin-right: 15px
+	margin-right: 15px;
 }
 
 .comment-author {
@@ -1510,8 +1514,27 @@ label.error {
 		line-height: 30px
 	}
 	
+	.content .tags {
+		text-align: center;
+	}
+	
+	.content .share-buttons {
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin-top: 10px;	
+	}
+	
+	.content .share-buttons a {
+		font-size: 24px;
+	}
+	
 	.meta .box {
 		background: none
+	}
+	
+	#comments ul {
+		padding-left: 0;
 	}
 	
 	#comments h3 {

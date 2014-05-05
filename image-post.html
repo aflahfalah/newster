@@ -10,7 +10,7 @@
 
 <link rel="shortcut icon" href="images/favicon.png">
 
-<title>Newster</title>
+<title>Image Post - Newster</title>
 
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +47,7 @@
 <script src="js/jquery.masonry.min.js"></script> 
 <script src="js/jquery.fitvids.js"></script> 
 <script src="js/jquery.custom.js"></script>
+<script src="js/jquery.placeholder.js"></script>
 
 </head>
 
@@ -197,22 +198,22 @@
   
     <div class="col-md-8 left-content">
     
-     <div class="media-content"> 
+      <div class="media-content"> 
       
       	<img class="img-responsive" src="images/slider/post1.jpg" alt=""/> 
       
       </div><!-- /.media-content --> 
-      
-      <div class="main-title padding">
-      
-        <h1>San Francisco bar bans 'Glassholes'</h1>
-        
-        <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
-      
-      </div><!-- /.main-title --> 
-      
-      <div class="content padding">
 
+      <div class="content padding">
+      
+        <div class="main-title">
+        
+          <h1>San Francisco bar bans 'Glassholes'</h1>
+          
+          <p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>
+        
+        </div><!-- /.main-title --> 
+        
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
         
         <p>Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="#">Curabitur blandit tempus porttitor</a>. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
@@ -231,7 +232,40 @@
         
         <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
         
-        <span class="tags">Tagged: <a href="#">News</a>, <a href="#">Tech</a></span> 
+        <div class="row">
+        
+        <div class="col-sm-6">
+        
+          <span class="tags">Tagged: <a href="#">News</a>, <a href="#">Tech</a></span> 
+        
+        </div>
+
+        <div class="col-sm-6">
+
+          <ul class="list-inline pull-right share-buttons">
+          
+  <!-- AddThis Button BEGIN 
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_pinterest_pinit"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-513375c7395449c1"></script>
+ AddThis Button END -->
+          
+           <li><a class="link" href="#" data-toggle="tooltip" title="Facebook"><span class="fa fa-facebook-square"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="Twitter"><span class="fa fa-twitter-square"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="Google+"><span class="fa fa-google-plus-square"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="LinkedIn"><span class="fa fa-linkedin-square"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="Tumblr"><span class="fa fa-tumblr-square"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="Email"><span class="fa fa-envelope"></span></a></li>
+            <li><a class="link" href="#" data-toggle="tooltip" title="Print"><span class="fa fa-print"></span></a></li>
+          </ul>
+         
+        </div>
+          
+        </div>
 
       </div><!-- /.content -->
       
@@ -359,7 +393,7 @@
                     
                       <img height="40" width="40" class="image pull-left" src="images/author.jpg" alt=""/>
                       
-                      <div class="comment-author">admin</div>
+                      <div class="comment-author">Volumens</div>
                       
                       <div class="date comment-meta">March 7, 2014 at 10:15 am · <a href="#" class="comment-reply-link">Reply</a></div>
                       
@@ -540,14 +574,14 @@
         <div class="tab-body">
         
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
-            <li><a href="#latest" data-toggle="tab">Latest</a></li>
-            <li><a href="#comments" data-toggle="tab">Comments</a></li>
+            <li class="active"><a href="#tab-popular" data-toggle="tab">Popular</a></li>
+            <li><a href="#tab-latest" data-toggle="tab">Latest</a></li>
+            <li><a href="#tab-comments" data-toggle="tab">Comments</a></li>
           </ul>
           
           <div class="tab-content">
           
-            <div class="tab-pane active" id="popular">
+            <div class="tab-pane active" id="tab-popular">
             
               <ul class="list-unstyled">
               
@@ -645,7 +679,7 @@
               
             </div><!-- /.tab-pane -->
             
-            <div class="tab-pane" id="latest">
+            <div class="tab-pane" id="tab-latest">
             
               <ul class="list-unstyled">
               
@@ -743,7 +777,7 @@
               
             </div><!-- /.tab-pane -->
             
-            <div class="tab-pane" id="comments">
+            <div class="tab-pane" id="tab-comments">
             
                <ul class="list-unstyled">
               
@@ -789,7 +823,7 @@
                   
                   <div class="pull-left info">
                   
-                    <h5><a href="#"><strong>admin:</strong> Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
+                    <h5><a href="#"><strong>Volumens:</strong> Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur bland</a></h5>
                     
                   </div><!-- /.info --> 
                   
