@@ -65,7 +65,8 @@ textarea:focus {
 .footer p a:hover,
 .footer .twitter-widget ul li a:hover,
 .copyright a:hover,
-.meta h2 a:hover {
+.meta h2 a:hover,
+.comment-author .author-tag {
     color: #009bff;
 }
 
@@ -923,6 +924,11 @@ textarea:focus {
 
 .comment-author {
 	font-weight: bold;
+}
+
+.comment-author .author-tag {
+	font-size: 10px;
+	font-weight: normal;
 }
 
 .comment-body {
