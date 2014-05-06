@@ -218,11 +218,13 @@ jQuery(document).ready(function($) {
 			$('.main-content').animate({left: '230px'}, 'fast');
 		 	$('.navbar-collapse').animate({left: '15px'}, 'fast');
 			$('.navbar').animate({left: '230px'}, 'fast');
+			$('.navbar-toggle').html('<i class="fa fa-times"></i>');	
 			$('body').addClass('modal-open');	
 		}else{
 			$('.main-content').animate({left: '0'}, 'fast');	 
 		 	$('.navbar-collapse').animate({left: '-230px'}, 'fast');
 			$('.navbar').animate({left: '0'}, 'fast');	
+			$('.navbar-toggle').html('<i class="fa fa-bars"></i>');
 			$('body').removeClass('modal-open');
 		}
 	});

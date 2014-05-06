@@ -490,15 +490,13 @@ textarea:focus {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
-}
-
-.navbar-toggle .icon-bar {
-	width: 16px;
+	color: #ffffff;
+	font-size: 18px;
 }
 
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus {
-	background: none
+	background: none;
 }
 
 /* Side Buttons */
@@ -772,7 +770,7 @@ textarea:focus {
 	letter-spacing: -1px;
 	font-weight: bold;
 	margin-top: 0;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 }
 
 .content h1,
@@ -835,57 +833,32 @@ textarea:focus {
 
 /* Author / Related Posts */
 
-.meta {
-	background: url(../images/dark-noise.png);
-    border-bottom: 1px solid #BBBBBB;
-	border-top: 1px solid #BBBBBB;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+.author {
+	margin: 0 30px;
+ 	border: 1px solid #cccccc;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:    0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow:         0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.meta .border {
-	border: 1px solid #ffffff;
-}
-
-.meta h4 {
+.author h4 {
     font-family: 'Montserrat',sans-serif;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 	margin-top: 0;
-	margin-bottom: 20px;
 }
 
-.meta hr {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	border-bottom: 1px dotted #bbbbbb;
-}
-
-.meta .author .image {
-	margin-right: 20px;
-}
-
-.meta .author p:last-child {
+.author p:last-child {
 	margin-bottom: 0;
 }
 
-/*.meta .box {
-	background: url(../images/separator.png) repeat-y right top;
+.related h4 {
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
-.meta .box:last-child {
-	background: none;
-}
-
-.meta .image a img:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-	filter: alpha(opacity=70);
-	-moz-opacity: 0.7;
-	-khtml-opacity: 0.7;
-	opacity: 0.7; 
-}*/
-
-.meta h2 {
+.related h2 {
 	margin-top: 10px;
 	margin-bottom: 0;
 	font-size: 12px;
@@ -893,9 +866,8 @@ textarea:focus {
 	line-height: 20px;
 }
 
-.meta h2 a {
+.related h2 a {
 	color: #333333;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -927,7 +899,7 @@ textarea:focus {
 }
 
 .comment-author .author-tag {
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: normal;
 }
 
@@ -951,41 +923,9 @@ textarea:focus {
 
 .description h1 {
 	margin-top: 0;
-	text-transform: uppercase;
 	font-weight: bold;
+	letter-spacing: -1px;
 	font-family: 'Montserrat',sans-serif;
-}
-
-/*-----------------------------------------------------------------------------------*/
-/*	5.	Breadcrumb
-/*-----------------------------------------------------------------------------------*/
-
-/*
-.border {
-    background: url("../images/bottom-border.png") repeat-x left bottom;
-    height: 6px;
-	margin-top: -6px;
-}*/
-
-.breadcrumb-wrap {
-	border-bottom: 1px solid #BBBBBB
-}
-
-.breadcrumb {
-	background: url(../images/dark-noise.png) ;
-	margin-bottom: 0;
-	padding: 20px 30px;
-	font-size: 11px;
-	text-transform: uppercase;
-	border: 1px solid #ffffff;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-}
-
-.breadcrumb a {
-	color: #666
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1535,12 +1475,16 @@ label.error {
 		font-size: 24px;
 	}
 	
-	.meta .box {
-		background: none
+	.meta h4 {
+		text-align: center;
+	}
+	
+	.meta .author .image {
+		margin-bottom: 20px;
 	}
 	
 	#comments ul {
-		padding-left: 0;
+		padding-left: 15px;
 	}
 	
 	#comments h3 {
