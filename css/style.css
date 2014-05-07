@@ -56,6 +56,7 @@ textarea:focus {
     outline: 0;
 }
 
+.modal-content a,
 #featured h2 a:hover,
 #primary .box h2 a:hover,
 .tab-content h5 a:hover,
@@ -424,6 +425,7 @@ textarea:focus {
 /* Mobile Navbar */
 
 .navbar-collapse.nav-side {
+	display: block;
 	max-height: 100%;
 	height: 100% !important;
 	position: fixed;
@@ -432,14 +434,14 @@ textarea:focus {
 	bottom: 0;
 	border: 0;
 	padding: 0;
+	margin:0;
 	width: 230px;
 	background: #333333;
-	border-right: 1px solid #444444; margin:0 !important;	display: block !important
+	border-right: 1px solid #444444; 	
 }
 
 .navbar-collapse.nav-side .navbar-nav {
 	margin: 50px 30px;
-
 }
 
 .navbar-collapse.nav-side .dropdown-menu {
@@ -460,18 +462,18 @@ textarea:focus {
 	padding: 0;
 }
 
-.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu >li > a {
+.navbar-collapse.nav-side .navbar-nav .open .dropdown-menu > li > a {
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .navbar-collapse.nav-side .dropdown-submenu:last-child {
-	padding-bottom: 15px 
+	padding-bottom: 15px;
 }
 
 .navbar-collapse.nav-side .dropdown-submenu ul {
     display: block;
-	margin-left: 10px !important
+	margin-left: 10px !important;
 }
 
 .navbar-collapse.nav-side .dropdown-submenu > a:after {
@@ -548,6 +550,12 @@ textarea:focus {
 
 #close:hover {
 	color: #ffffff;
+}
+
+.modal-content {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -771,7 +779,7 @@ textarea:focus {
 	letter-spacing: -1px;
 	font-weight: bold;
 	margin-top: 0;
-	/*margin-bottom: 25px;*/
+	margin-bottom: 25px;
 }
 
 .content h1,
@@ -829,7 +837,7 @@ textarea:focus {
 }
 
 .content .share-buttons a:hover {
-	color: #999999;
+	color: #666;
 }
 
 /* Author / Related Posts */
@@ -1476,12 +1484,22 @@ label.error {
 		font-size: 24px;
 	}
 	
-	.meta h4 {
+	.author-avatar {
 		text-align: center;
 	}
 	
-	.meta .author .image {
-		margin-bottom: 20px;
+	.author-avatar .image {
+	   margin: auto;
+	   display: inline-block;
+	   margin-bottom: 10px;
+	}
+	
+	.author-avatar .image img {
+		width: auto;
+	}
+	
+	.author h4 {
+		text-align: center;
 	}
 	
 	#comments ul {
