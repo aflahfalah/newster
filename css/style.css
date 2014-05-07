@@ -428,17 +428,18 @@ textarea:focus {
 	height: 100% !important;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -230px;
 	bottom: 0;
 	border: 0;
 	padding: 0;
 	width: 230px;
 	background: #333333;
-	border-right: 1px solid #444444;
+	border-right: 1px solid #444444; margin:0 !important;	display: block !important
 }
 
 .navbar-collapse.nav-side .navbar-nav {
 	margin: 50px 30px;
+
 }
 
 .navbar-collapse.nav-side .dropdown-menu {

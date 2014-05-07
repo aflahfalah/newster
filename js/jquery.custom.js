@@ -214,10 +214,11 @@ jQuery(document).ready(function($) {
 	
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left');
-		if( position != '15px'){
-			$('.main-content').animate({left: '230px'}, 'fast');
-		 	$('.navbar-collapse').animate({left: '15px'}, 'fast');
-			$('.navbar').animate({left: '230px'}, 'fast');
+		if( position != '0px'){
+			$('.navbar-collapse').animate({left: '0'}, 'fast');
+			$('.main-content, .navbar').animate({left: '230px'}, 'fast');
+		 	
+			//$('.navbar').animate({left: '230px'}, 'fast');
 			$('.navbar-toggle').html('<i class="fa fa-times"></i>');	
 			$('body').addClass('modal-open');	
 		}else{
