@@ -66,9 +66,16 @@ textarea:focus {
 .footer p a:hover,
 .footer .twitter-widget ul li a:hover,
 .copyright a:hover,
-.meta h2 a:hover,
+.post-meta .related h2 a:hover,
 .comment-author .author-tag {
     color: #009bff;
+}
+
+.modal-content a:hover,
+.sidebar .twitter-widget a:hover,
+.content a:hover,
+.author a:hover {
+    color: #247fba;
 }
 
 .form-control {
@@ -801,10 +808,6 @@ textarea:focus {
 	margin-bottom: 30px;
 }
 
-.content a:hover {
-	color: #aeaeae;
-}
-
 .content blockquote {
 	font-style: italic;
 	color: #666666;
@@ -843,37 +846,37 @@ textarea:focus {
 
 /* Author / Related Posts */
 
-.meta {
+.post-meta {
  	border-top: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
 	background: url(../images/dark-noise.png);	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
-.meta .border {
+.post-meta .border {
  	border: 1px solid #ffffff;
 }
 
-.meta h4 {
+.post-meta h4 {
     font-family: 'Montserrat',sans-serif;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: 20px;
-	background: url(../images/dots.png) repeat-x center;
+	background: url(../images/post-meta.png) repeat-x center;
 }
 
-.meta h4 span {
+.post-meta h4 span {
 	padding-right: 10px;
 	background: url(../images/dark-noise.png);
 }
 
-.author p:last-child {
+.post-meta .author p:last-child {
 	margin-bottom: 0;
 }
 
-.related h2 {
+.post-meta .related h2 {
 	margin-top: 10px;
 	margin-bottom: 0;
 	font-size: 12px;
@@ -881,7 +884,7 @@ textarea:focus {
 	line-height: 20px;
 }
 
-.related h2 a {
+.post-meta .related h2 a {
 	color: #333333;
 }
 
