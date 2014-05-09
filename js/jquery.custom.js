@@ -215,15 +215,15 @@ jQuery(document).ready(function($) {
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left');
 		if( position != '0px'){
-			$('.main-content, .navbar').animate({left: '230px'}, 'fast');
-			$('.navbar-collapse').animate({left: '0px'}, 'fast');
-			$('.navbar-toggle').html('<i class="fa fa-times"></i>');	
-			$('body').addClass('modal-open');	
+			$('body').addClass('modal-open');
+			$('.main-content, .navbar').animate({left: '230px'}, 300);
+			$('.navbar-collapse').animate({left: '0px'}, 300);
+			$('.navbar-toggle').html('<i class="fa fa-times"></i>');		
 		}else{
-			$('.main-content, .navbar').animate({left: '0px'}, 'fast');	 
-		 	$('.navbar-collapse').animate({left: '-230px'}, 'fast');
-			$('.navbar-toggle').html('<i class="fa fa-bars"></i>');
 			$('body').removeClass('modal-open');
+			$('.main-content, .navbar').animate({left: '0px'}, 300);	 
+		 	$('.navbar-collapse').animate({left: '-230px'}, 300);
+			$('.navbar-toggle').html('<i class="fa fa-bars"></i>');
 		}
 	});
 
@@ -238,10 +238,10 @@ jQuery(document).ready(function($) {
         	if ($window.width() < 768) {
            		$('.navbar-collapse').addClass('nav-side');           		           		
         	}else{
-				$('.main-content, .navbar').animate({left: '0',}, 'fast');
-        		$('.navbar-collapse').removeClass('nav-side').animate({left: '-230px',}, 'fast');			
-				$('.navbar-toggle').html('<i class="fa fa-bars"></i>');
 				$('body').removeClass('modal-open');
+				$('.main-content, .navbar').animate({left: '0',}, 300);
+        		$('.navbar-collapse').removeClass('nav-side').animate({left: '-230px',}, 300);			
+				$('.navbar-toggle').html('<i class="fa fa-bars"></i>');
         	}        
     	}).trigger('resize');
 	})(jQuery);

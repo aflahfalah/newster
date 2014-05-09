@@ -75,7 +75,7 @@ textarea:focus {
 .sidebar .twitter-widget a:hover,
 .content a:hover,
 .author a:hover {
-    color: #247fba;
+    color: #666;
 }
 
 .form-control {
@@ -592,7 +592,6 @@ textarea:focus {
     left: 0;
     right: 0;
 	height: 100%;
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNzUiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */
@@ -870,6 +869,10 @@ textarea:focus {
 .post-meta h4 span {
 	padding-right: 10px;
 	background: url(../images/dark-noise.png);
+}
+
+.post-meta .author .image {
+	margin-right: 20px;
 }
 
 .post-meta .author p:last-child {
@@ -1471,11 +1474,10 @@ label.error {
 		font-size: 24px;
 	}
 	
-	/* Post */
-	
 	.main-title h1 {
 		font-size: 24px	;
-		line-height: 30px
+		line-height: 30px;
+		margin-bottom: 10px;
 	}
 	
 	.content .tags {
@@ -1492,31 +1494,17 @@ label.error {
 	.content .share-buttons a {
 		font-size: 24px;
 	}
-	
-	.author {
-		text-align: center;
-	}
-	
-	.author .image {
-	   margin: auto;
-	   display: inline-block;
-	   margin-bottom: 10px;
-	}
-	
-	.author-avatar .image img {
-		width: auto;
-	}
-	
-	.author h4 {
-		text-align: center;
-	}
-	
-	#comments ul {
-		padding-left: 15px;
+
+	.post-meta .related .box {
+		margin-top: 20px;
 	}
 	
 	#comments h3 {
-		font-size: 18px	
+		font-size: 18px;
+	}
+
+	#comments ul {
+		padding-left: 15px;
 	}
 
 }
