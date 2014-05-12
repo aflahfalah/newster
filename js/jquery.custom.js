@@ -36,8 +36,8 @@ jQuery(document).ready(function($) {
 	
 	$('.masonry').imagesLoaded(function(){
 		$('.masonry').masonry({
-		  itemSelector: '.box',
-		  columnWidth: '.box',
+			itemSelector: '.box',
+		  	columnWidth: '.box'		  
 		});
 	});
 
