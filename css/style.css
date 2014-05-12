@@ -105,6 +105,18 @@ textarea:focus {
 	margin-bottom: 20px;
 }
 
+.no-display { 
+	opacity: 0; 
+}
+
+.appear {
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
 .image {
 	display: block;
 	position: relative;
@@ -1426,7 +1438,7 @@ label.error {
 	}
 	
 	.padding {
-		padding: 20px;
+		padding: 25px;
 	}	
 	
 	.search {
