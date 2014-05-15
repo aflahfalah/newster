@@ -2,7 +2,7 @@
 
   $posts = array(
     
-	'<div class="col-md-6 col-sm-6 box padding">'
+	'<div class="col-md-6 col-sm-6 col-xs-12 box padding">'
 	. '<div class="header">'  
 	  . '<h2><a href="#">10 most improved teams after NHL trade deadline</a></h2>'    
 	  . '<p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>'    
@@ -14,7 +14,7 @@
 	. '<p class="excerpt">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis...</p>'
 	. '</div>',
 	
-	'<div class="col-md-6 col-sm-6 box padding">'
+	'<div class="col-md-6 col-sm-6 col-xs-12 box padding">'
 	  . '<div class="header">'  
 		. '<h2><a href="#">Obama: Russian intervention completely illegitimate</a></h2>'    
 		. '<p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>'    
@@ -26,7 +26,7 @@
 	  . '<p class="excerpt">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis...</p>'
 	. '</div>',
 	
-	'<div class="col-md-6 col-sm-6 box padding">'
+	'<div class="col-md-6 col-sm-6 col-xs-12 box padding">'
 	. '<div class="header">'  
 	  . '<h2><a href="#">Walmart enters the auto insurance business</a></h2>'    
 	  . '<p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>'    
@@ -39,7 +39,7 @@
 	. '<p class="excerpt">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis...</p>'
 	. '</div>',
 	
-	'<div class="col-md-6 col-sm-6 box padding">'
+	'<div class="col-md-6 col-sm-6 col-xs-12 box padding">'
 	  . '<div class="header">'  
 		. '<h2><a href="#">Tablets and the future of education</a></h2>'    
 		. '<p class="date">March 7, 2014<span>&nbsp;/&nbsp;</span><a href="#">No Comments</a></p>'    

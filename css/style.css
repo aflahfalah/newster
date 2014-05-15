@@ -1474,12 +1474,6 @@ label.error {
 		margin-bottom: 20px;
 	}
 	
-	#primary .box:last-child .excerpt {
-		padding-bottom: 0;
-		margin-bottom: 0;
-		border-bottom: 0;
-	}
-	
 	#back-to-top {
 		float: none !important;
 		text-align: center;
