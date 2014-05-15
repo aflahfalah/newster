@@ -712,7 +712,8 @@ textarea:focus {
 }
 
 #featured {
-	background: url(../images/dark-noise.png);
+	background: #f2f2f2;
+	/*background: url(../images/dark-noise.png);*/
 	border-bottom: 1px solid #BBBBBB;
 }
 
@@ -882,7 +883,8 @@ textarea:focus {
 .post-meta {
  	border-top: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
-	background: url(../images/dark-noise.png);	
+	background: #f2f2f2;
+	/*background: url(../images/dark-noise.png);*/	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
@@ -1464,13 +1466,18 @@ label.error {
 
 	#primary {
 		background-image: none;
-		padding-top: 20px;
-		margin-bottom: 20px;
+		padding-top: 25px;
 	} 
 	
 	#primary .box .excerpt {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
+	}
+	
+	#primary .box:last-child .excerpt {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: 0;
 	}
 	
 	#back-to-top {
