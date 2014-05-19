@@ -1186,7 +1186,7 @@ textarea:focus {
 
 /* Tabbed Widget */
 
-.tab-body {
+.tab-widget .tab-body {
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1194,16 +1194,16 @@ textarea:focus {
 	box-shadow:         0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.nav-tabs {
+.tab-widget .nav-tabs {
 	background:#f6f6f6;
 }
 
-.nav-tabs > li {
+.tab-widget .nav-tabs > li {
 	width: 33.33333333%;
 	text-align: center;
 }
 
-.nav-tabs > li > a {
+.tab-widget .nav-tabs > li > a {
 	border-right: 1px solid #DDDDDD !important;
 	border-left: 0 !important;
 	border-top: 0 !important;
@@ -1215,45 +1215,45 @@ textarea:focus {
 	margin-right: 0;
 }
 
-.nav-tabs > li:last-child > a {
+.tab-widget .nav-tabs > li:last-child > a {
 	border-right: 0 !important;
 }
 
-.tab-content ul {
+.tab-widget .tab-content ul {
 	margin: 0;
 }
 
-.tab-content ul li {
+.tab-widget .tab-content ul li {
     border-bottom: 1px solid #E2E2E2;
 	padding: 20px;
 	position: relative;
 	min-height: 95px
 }
 
-.tab-content ul li:last-child {
+.tab-widget .tab-content ul li:last-child {
     border: 0;
 }
 
-.tab-content .image {
+.tab-widget .tab-content .image {
     margin-right: 10px;
 	position: absolute;
 }
 
-.tab-content .info {
+.tab-widget .tab-content .info {
     margin-left: 70px
 }
 
-.tab-content h5 {
+.tab-widget .tab-content h5 {
     line-height: 20px;
 	font-size: 14px;
 	margin: 0
 }
 
-.tab-content h5 a {
+.tab-widget .tab-content h5 a {
     color: #333333;
 }
 
-.tab-content p {
+.tab-widget .tab-content p {
     margin: 0
 }
 
@@ -1392,6 +1392,13 @@ textarea:focus {
 label.error {
 	margin-top: 5px;
 	color: red;
+}
+
+/* Full Width */
+
+.left-content.full-width {
+	border: 0;
+	margin: 0;
 }
 
 /* 404 Error */
