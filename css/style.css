@@ -32,7 +32,6 @@
 
 body {
 	background: #f3f3f3;
-	/*background: url(../images/background.gif);*/
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -93,7 +92,6 @@ textarea:focus {
 	margin-top: 100px;
 	border: 1px solid #bbbbbb;
 	background: #f9f9f9;
-	/*background: url(../images/light-noise.png);*/
 	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.15);
 	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.15);
 	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.15);
@@ -600,6 +598,10 @@ textarea:focus {
 	margin: -1px -1px 0 -1px;
 }
 
+#slider .padding {
+	position: absolute;
+}
+
 #slider .carousel-inner .item {
     opacity: 0;
     -webkit-transition-property: opacity;
@@ -641,6 +643,7 @@ textarea:focus {
 #slider .category-badge {
     left: auto;
     top: auto;
+	position: relative;
 }
 
 #slider .carousel-caption {
@@ -719,7 +722,6 @@ textarea:focus {
 
 #featured {
 	background: #f2f2f2;
-	/*background: url(../images/dark-noise.png);*/
 	border-bottom: 1px solid #BBBBBB;
 }
 
@@ -871,6 +873,7 @@ textarea:focus {
 }
 
 .content .share-buttons {
+	text-align: right;
 	margin-bottom: 0;
 }
 
@@ -889,7 +892,6 @@ textarea:focus {
  	border-top: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
 	background: #f2f2f2;
-	/*background: url(../images/dark-noise.png);*/	
 }
 
 .post-meta .border {
@@ -909,11 +911,6 @@ textarea:focus {
 .post-meta h4 span {
 	padding-right: 10px;
 	background: #f2f2f2;
-	/*background: url(../images/dark-noise.png);*/	
-}
-
-.post-meta .author .image {
-	margin-right: 20px;
 }
 
 .post-meta .author p:last-child {
@@ -1457,8 +1454,14 @@ label.error {
 		margin-top: 69px;
 	}
 	
+	#slider .carousel-overlay {
+		position: relative; 
+		background: #333333;
+	}
+	
 	#slider .carousel-caption {
 		width: 100%;
+		position: relative;
 	}
 	
 	#slider .carousel-caption h1 {
@@ -1469,20 +1472,11 @@ label.error {
 	#slider .carousel-caption .date {
 		margin-bottom: 0;
 	}
-	
-	#slider .carousel-overlay {position: relative; background: #222; height:auto}
-	
-	#slider .carousel-caption {position: relative;}
 
 	#primary {
 		background-image: none;
 		padding-top: 25px;
 	} 
-	
-	/*#primary .box .excerpt {
-		padding-bottom: 20px;
-		margin-bottom: 20px;
-	}*/
 	
 	#back-to-top {
 		float: none !important;
@@ -1520,11 +1514,14 @@ label.error {
 		margin-bottom: 10px;
 	}
 	
-	.content .share-buttons {
-		width: 100%;
-		float: none;
+	.content .tags {
 		text-align: center;
-		margin-top: 10px;	
+		margin: 0;
+	}
+	
+	.content .share-buttons {
+		text-align: center;
+		margin-top: 5px;	
 	}
 	
 	.content .share-buttons a {
@@ -1532,7 +1529,7 @@ label.error {
 	}
 
 	.post-meta .related .box {
-		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 	
 	#comments h3 {
