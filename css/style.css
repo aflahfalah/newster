@@ -30,6 +30,16 @@
 /*	0.	Document Setup (body, common classes, vertical rhythm, structure etc)
 /*-----------------------------------------------------------------------------------*/
 
+.main-content {
+	 display: table;  
+}
+	
+.left-content, .sidebar { 
+	float:none; 
+	display: table-cell; 
+    vertical-align: top; 
+}
+
 body {
 	background: #f3f3f3;
 	font-family: 'Roboto', sans-serif;
