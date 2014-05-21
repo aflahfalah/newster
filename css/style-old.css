@@ -794,9 +794,6 @@ textarea:focus {
 #primary { 
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-#primary.masonry { 
 	background-image: url(../images/separator.png);
 	background-repeat: repeat-y;
 	background-position: center top;
@@ -805,10 +802,6 @@ textarea:focus {
 #primary .box { 
 	padding-top: 0;
 	padding-bottom: 0;
-}
-
-#primary .box .image { 
-	margin-bottom: 15px;
 }
 
 #primary .box h2 { 
@@ -831,6 +824,7 @@ textarea:focus {
 }
 
 #primary .box .excerpt {
+	padding-top: 15px;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 	border-bottom: 1px dotted #cccccc;
