@@ -454,28 +454,32 @@ textarea:focus {
 /* Mobile Navbar */
 
 .navbar-collapse.nav-side {
-	display: block;
+	display: none;
 	max-height: 100%;
 	height: 100% !important;
 	overflow-y: auto;
 	position: fixed;
 	top: 0;
-	left: -230px;
+	left: 0;
 	bottom: 0;
 	border: 0;
 	padding: 0;
-	margin:0;
-	width: 230px;
-	background: #333333;
-	border-right: 1px solid #444444; 	
+	margin: 0;
+	z-index: 999;
+	width: 100%;
+	background: #222222;
+	text-align: center;
+}
+
+.navbar-collapse.nav-side .navbar-close {
+	display: block;
 }
 
 .navbar-collapse.nav-side .navbar-nav {
-	margin: 50px 30px;
+	margin: 60px 0 0 0;
 }
 
 .navbar-collapse.nav-side .dropdown-menu {
-	background: none !important;
 	padding: 0 !important
 }
 
@@ -483,18 +487,18 @@ textarea:focus {
 .navbar-collapse.nav-side .multi-level > li:last-child {
 	border-right: 0;
 	border-left: 0;
-	border-bottom: 1px solid #444444;
 }
 
 .navbar-collapse.nav-side .multi-level > li > a {
-	background: none !important;
 	margin: 0;
 	padding: 0;
+	font-size: 20px;
 }
 
 .navbar-collapse.nav-side .navbar-nav .open .dropdown-menu > li > a {
 	padding-left: 0;
 	padding-right: 0;
+	color: #ffffff
 }
 
 .navbar-collapse.nav-side .dropdown-submenu:last-child {
@@ -503,7 +507,6 @@ textarea:focus {
 
 .navbar-collapse.nav-side .dropdown-submenu ul {
     display: block;
-	margin-left: 10px !important;
 }
 
 .navbar-collapse.nav-side .dropdown-submenu > a:after {
@@ -530,6 +533,19 @@ textarea:focus {
 .navbar-inverse .navbar-toggle:hover, 
 .navbar-inverse .navbar-toggle:focus {
 	background: none;
+}
+
+.navbar-close {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: #999999;
+	font-size: 24px;
+}
+
+.navbar-close:hover {
+	color: #ffffff;
 }
 
 /* Side Buttons */
@@ -594,14 +610,8 @@ textarea:focus {
 
 .left-content {
 	background-color: #ffffff;
-	border-top: 1px solid #bbbbbb;
-	border-left: 1px solid #bbbbbb;
-	border-right: 1px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	padding: 0;
-	/*top: -20px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;*/
 	margin: -21px -1px 0 -1px;
 	-webkit-box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.2);
 	-moz-box-shadow:    0px 0px 20px rgba(50, 50, 50, 0.2);
@@ -761,10 +771,6 @@ textarea:focus {
 	background: #ffffff;
 }
 
-/*#featured .carousel-inner {
-	border: 1px solid #ffffff;
-}*/
-
 #featured .row {
 	padding-bottom: 60px;
 }
@@ -794,6 +800,9 @@ textarea:focus {
 #primary { 
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+#primary.masonry { 
 	background-image: url(../images/separator.png);
 	background-repeat: repeat-y;
 	background-position: center top;
@@ -802,6 +811,10 @@ textarea:focus {
 #primary .box { 
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+#primary .box .image { 
+	margin-bottom: 15px;
 }
 
 #primary .box h2 { 
@@ -824,7 +837,6 @@ textarea:focus {
 }
 
 #primary .box .excerpt {
-	padding-top: 15px;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 	border-bottom: 1px dotted #cccccc;
@@ -1093,6 +1105,7 @@ textarea:focus {
 }
 
 .social-widget .info {
+	display: block;
     padding: 15px 0;
     text-align: center;
 }
@@ -1327,7 +1340,7 @@ textarea:focus {
 /* Footer */
 
 .footer-wrap {
-	margin: 0 -1px -1px -1px;
+	margin: -1px;
 }
 
 .footer {
@@ -1546,13 +1559,12 @@ label.error {
 		width: 100%;
 		text-align: center;
 		margin-top: 10px;
-		/*font-size: 24px;*/
+		font-size: 24px;
 	}
 	
 	.main-title  {
 		font-size: 24px	;
 		line-height: 30px;
-		/*margin-bottom: 10px;*/
 	}
 	
 	.content .tags {
@@ -1565,9 +1577,9 @@ label.error {
 		margin-top: 5px;	
 	}
 	
-	/*.content .share-buttons a {
+	.content .share-buttons a {
 		font-size: 24px;
-	}*/
+	}
 
 	.post-meta .related .box {
 		margin-bottom: 20px;
