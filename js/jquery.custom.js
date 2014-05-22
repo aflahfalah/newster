@@ -216,7 +216,7 @@ jQuery(document).ready(function($) {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle
 	/*-----------------------------------------------------------------------------------*/
-	
+
 	$('.navbar-toggle').click(function() {
 		var position = $('.navbar-collapse').css('left');
 		if( position != '0px'){
