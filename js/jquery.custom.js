@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
 	/*	Show dropdown on hover
 	/*-----------------------------------------------------------------------------------*/
 	
-	(function ($, window, delay) {
+	/*(function ($, window, delay) {
 		var theTimer = 0,
 			theElement = null,
 			theLastPosition = {x:0,y:0},
@@ -211,7 +211,7 @@ jQuery(document).ready(function($) {
 		  		}
 			}, delay);
 	  	});
-	})(jQuery, window, 200); // 200 is the delay in milliseconds
+	})(jQuery, window, 200);*/ // 200 is the delay in milliseconds
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle
