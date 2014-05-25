@@ -5,7 +5,7 @@
 -----------------------------------------------------------------------------------*/
  
 jQuery(document).ready(function($) {
-
+	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Search Button
 	/*-----------------------------------------------------------------------------------*/
@@ -117,8 +117,8 @@ jQuery(document).ready(function($) {
 	/*	Responsive Videos
 	/*-----------------------------------------------------------------------------------*/
 	
+	$('#media-content').fitVids();
 	$('.video-widget').fitVids();
-	$('.media-content').fitVids();
 	$('.content').fitVids();
 
 	/*-----------------------------------------------------------------------------------*/
@@ -134,11 +134,11 @@ jQuery(document).ready(function($) {
 	/*	Boostrap Swipe
 	/*-----------------------------------------------------------------------------------*/
 
-	$('#slider').swiperight(function() {
-		$('#slider').carousel('prev');
+	$('#media-content').swiperight(function() {
+		$('#media-content').carousel('prev');
 	});
-	$('#slider').swipeleft(function() {
-		$('#slider').carousel('next');
+	$('#media-content').swipeleft(function() {
+		$('#media-content').carousel('next');
 	});
 	
 	$('#featured').swiperight(function() {
@@ -152,9 +152,9 @@ jQuery(document).ready(function($) {
 	/*	Image Scroll Animations
 	/*-----------------------------------------------------------------------------------*/
 	
-	$('#slider, #featured .carousel-inner, #primary .image, .widget, .media-content, .content, .author, .related, #comments ol li, #respond').addClass('no-display');
+	$('#media-content, #featured .carousel-inner, #primary .image, .widget, .media-content, .content, .author, .related, #comments ol li, #respond').addClass('no-display');
 	
-	$('#slider, #featured .carousel-inner, #primary .image, .widget, .media-content, .content, .author, .related, #comments ol li, #respond').one('inview', function() {
+	$('#media-content, #featured .carousel-inner, #primary .image, .widget, .media-content, .content, .author, .related, #comments ol li, #respond').one('inview', function() {
 		$(this).addClass('appear');
 	});
 
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
 	/*	Show dropdown on hover
 	/*-----------------------------------------------------------------------------------*/
 	
-	/*(function ($, window, delay) {
+	(function ($, window, delay) {
 		var theTimer = 0,
 			theElement = null,
 			theLastPosition = {x:0,y:0},
@@ -211,7 +211,7 @@ jQuery(document).ready(function($) {
 		  		}
 			}, delay);
 	  	});
-	})(jQuery, window, 200);*/ // 200 is the delay in milliseconds
+	})(jQuery, window, 200); // 200 is the delay in milliseconds
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle

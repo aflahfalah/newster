@@ -25,14 +25,6 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
-
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -51,7 +43,7 @@
 
 </head>
 
-<body class="home">
+<body>
 
 <div class="modal fade bs-example-modal-sm" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
@@ -131,18 +123,14 @@
     
       <div class="navbar-header">
       
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-        
-          <i class="fa fa-bars"></i>
-          
-        </button>
+        <button type="button" class="navbar-toggle"><i class="fa fa-bars"></i></button>
         
         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo"></a> 
         
       </div><!-- /.navbar-header -->
       
       <div class="collapse navbar-collapse">
-      
+
         <ul class="nav navbar-nav multi-level">
           <li class="home"><a href="index.html"><span></span>Home</a></li>
           <li class="active category1"><a href="#"><span></span>News</a></li>
@@ -150,12 +138,12 @@
           <li class="category3"><a href="#"><span></span>Tech</a></li>
           <li class="category4"><a href="#"><span></span>Sports</a></li>
           <li class="category5"><a href="#"><span></span>Politics</a></li>
-          <li class="dropdown category6"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>More <b class="caret"></b></a>
+          <li class="dropdown category6"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span></span>Features <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="category.html">Category</a></li>
               <li><a href="404.html">404</a></li>
               <li><a href="search.html">Search</a></li>
-              <li class="dropdown-submenu"><a href="category.html">Post Types</a>
+              <li class="dropdown-submenu"><a href="#">Post Types</a>
                 <ul class="dropdown-menu">
                   <li><a href="image-post.html">Image Post</a></li>
                   <li><a href="gallery-post.html">Gallery Post</a></li>
@@ -163,7 +151,7 @@
                   <li><a href="audio-post.html">Audio Post</a></li>
                 </ul>
               </li>
-              <li class="dropdown-submenu"><a href="image-post.html">Page Templates</a>
+              <li class="dropdown-submenu"><a href="#">Page Templates</a>
                 <ul class="dropdown-menu">
                   <li><a href="archive.html">Archive</a></li>
                   <li><a href="full-width.html">Full Width</a></li>
@@ -196,16 +184,9 @@
   
     <div class="col-md-8 left-content">
     
-     <!--<ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li class="active">News</li>
-      </ol>
+       <div class="description padding">
       
-      <div class="border"></div>-->
-        
-      <div class="description padding">
-      
-        <h1>News</h1>
+        <h1 class="main-title">News</h1>
         
         <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id ultricies ut vehicula ut id. Integer posuere erat a venenatis dapibus posuere velit aliquet duis mollis.</p>
       
@@ -215,7 +196,7 @@
       
         <div class="row">
         
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">The Moment Ellen Passed Obama for Most Popular Tweet of All Time</a></h2>
             
@@ -235,7 +216,7 @@
           
           </div><!-- /.box -->
           
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">Neymar hits hat trick in Brazil rout of South Africa</a></h2>
             
@@ -255,7 +236,7 @@
             
           </div><!-- /.box -->
           
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">Report: Apple iPhone Still Top U.S. Smartphone, iOS Gains Traction</a></h2>
             
@@ -275,7 +256,7 @@
             
           </div><!-- /.box -->
           
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">Bitcoin exchange CEO found dead in Singapore</a></h2>
             
@@ -293,7 +274,7 @@
             
           </div><!-- /.box --> 
           
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">10 most improved teams after NHL trade deadline</a></h2>
             
@@ -313,7 +294,7 @@
             
           </div><!-- /.box -->
           
-          <div class="col-md-6 col-sm-6 box padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 box padding">
           
             <h2><a href="#">Obama: Russian intervention completely illegitimate</a></h2>
             
@@ -346,14 +327,12 @@
           <li><a href="#">5</a></li>
           <li><a href="#">&raquo;</a></li>
         </ul>
-      
-        <!--<button id="load-more" type="button" class="btn btn-default">Show More News</button>-->
-        
+
       </div><!-- /.navigation --> 
       
     </div><!-- /.left-content -->
     
-    <div class="col-md-4 col-sm-12 sidebar padding"> 
+    <div class="col-md-4 col-sm-12 sidebar padding hidden-sm hidden-xs"> 
       
       <div class="widget social-widget clearfix">
       
@@ -362,40 +341,40 @@
           <div class="col-md-4 col-sm-4 col-xs-4 facebook-count"> 
           
             <a href="#" class="icon"><span class="fa fa-facebook fa-lg"></span></a>
-          
-            <div class="info">
             
-              <a href="#" class="count">7345</a>
-              <a href="#" class="title">Likes</a>
+            <a href="#" class="info"> 
+            
+              <span class="count">7345</span> 
+              <span class="title">Likes</span>
               
-            </div><!-- /.info --> 
-            
+            </a><!-- /.info -->
+
           </div><!-- /.facebook-count --> 
           
           <div class="col-md-4 col-sm-4 col-xs-4 twitter-count"> 
           
             <a href="#" class="icon"><span class="fa fa-twitter fa-lg"></span></a>
           
-            <div class="info"> 
+            <a href="#" class="info"> 
             
-              <a href="#" class="count">2284</a> 
-              <a href="#" class="title">Followers</a>
+              <span class="count">2284</span> 
+              <span class="title">Followers</span>
               
-            </div><!-- /.info -->
+            </a><!-- /.info -->
             
           </div><!-- /.twitter-count --> 
           
           <div class="col-md-4 col-sm-4 col-xs-4 rss-count"> 
           
             <a href="#" class="icon"><span class="fa fa-rss fa-lg"></span></a>
-          
-            <div class="info">
             
-              <a href="#" class="count">8972</a> 
-              <a href="#" class="title">Subscribers</a>
+            <a href="#" class="info"> 
+            
+              <span class="count">8972</span> 
+              <span class="title">Subscribers</span>
               
-            </div><!-- /.info -->
-            
+            </a><!-- /.info -->
+
           </div><!-- /.rss-count --> 
           
         </div><!-- /.row -->
@@ -414,7 +393,7 @@
           
           <div class="tab-content">
           
-            <div class="tab-pane active" id="tab-popular">
+            <div class="tab-pane fade in active" id="tab-popular">
             
               <ul class="list-unstyled">
               
@@ -512,7 +491,7 @@
               
             </div><!-- /.tab-pane -->
             
-            <div class="tab-pane" id="tab-latest">
+            <div class="tab-pane fade" id="tab-latest">
             
               <ul class="list-unstyled">
               
@@ -610,7 +589,7 @@
               
             </div><!-- /.tab-pane -->
             
-            <div class="tab-pane" id="tab-comments">
+            <div class="tab-pane fade" id="tab-comments">
             
                <ul class="list-unstyled">
               
