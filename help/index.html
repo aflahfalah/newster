@@ -1,0 +1,234 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>Newster Documentation</title>
+<!-- Framework CSS -->
+<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+<style type="text/css" media="screen">
+p, table, hr, .box, img, code {
+	margin-bottom: 25px;
+	display: block;
+}
+.box p {
+	margin-bottom: 10px;
+}
+.underline {
+	background: #FF0033;
+	color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h3 class="center alt">&ldquo;Newster&rdquo; Documentation by &ldquo;Volumens&rdquo; v1.0</h3>
+  <hr>
+  <h1 class="center">&ldquo;Newster - Magazine Theme&rdquo;</h1>
+  <div class="borderTop">
+    <div class="span-6 colborder info prepend-1">
+      <p class="prepend-top"> <strong> Created: 01/06/2014<br>
+        By: Volumens<br>
+        Email: <a href="mailto:support@volumens.com">support@volumens.com</a> </strong> </p>
+    </div>
+    <!-- end div .span-6 -->
+    <div class="span-12 last">
+      <p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/volumens">here</a>. Thanks so much!</p>
+    </div>
+  </div>
+  <!-- end div .borderTop -->
+  <hr>
+  <h2 id="toc" class="alt">Table of Contents</h2>
+  <ol class="alpha">
+    <li><a href="#htmlStructure">HTML Structure</a></li>
+    <li><a href="#cssFiles">CSS Files and Structure</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#credits">Sources and Credits</a></li>
+  </ol>
+  <hr>
+  <h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+  <p>This template is a responsive layout with two columns. The HTML structure is basically divided in four parts:</p>
+  <ul>
+	<li><strong>Modal:</strong> Here comes the content for the signin/signup modal form.</li>
+    <li><strong>Navbar:</strong> Here comes the content for the fixed navbar, the multilevel dropdowns, the search form and the signin/signup button.</li>
+    <li><strong>Left Content:</strong> Here comes the main content. News slider and carrousel, latest news boxes, post content, comments and comment form.</li>
+    <li><strong>Sidebar:</strong> Here comes all the widgets that the user may want to add to the theme.</li>
+    <li><strong>Footer:</strong> Here comes the secondary nav, scroll to top button, three columns for widgets, credits and social networks.</li>
+  </ul>
+  <code>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/favicon.png" rel="shortcut icon">
+  <title></title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Extended Glyphicons -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--><script src="js/jquery.min.js"></script><script src="js/jquery.mobile.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.imagesloaded.min.js"></script><script src="js/jquery.masonry.min.js"></script><script src="js/jquery.fitvids.js"></script><script src="js/jquery.custom.js"></script><script src="js/jquery.placeholder.js"></script>
+  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade bs-example-modal-sm" id="login" role="dialog" tabindex="-1">
+    <div> &lt;!DOCTYPE html&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;html lang=&quot;en&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;head&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;meta charset=&quot;utf-8&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.png&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;title&gt;Newster&lt;/title&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;!-- Bootstrap core CSS --&gt;</div>
+    <div> &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;!-- Custom styles for this template --&gt;</div>
+    <div> &lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;!-- Extended Glyphicons --&gt;</div>
+    <div> &lt;link rel=&quot;stylesheet&quot; href=&quot;css/font-awesome.min.css&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;!-- Custom Google Fonts --&gt;</div>
+    <div> &lt;link href=&#39;http://fonts.googleapis.com/css?family=Roboto:400,700&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;</div>
+    <div> &lt;link href=&#39;http://fonts.googleapis.com/css?family=Montserrat:400,700&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;</div>
+    <div> &lt;!-- WARNING: Respond.js doesn&#39;t work if you view the page via file:// --&gt;</div>
+    <div> &lt;!--[if lt IE 9]&gt;</div>
+    <div> &lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;</div>
+    <div> &lt;script src=&quot;https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</div>
+    <div> &lt;![endif]--&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.mobile.min.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.imagesloaded.min.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.masonry.min.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.fitvids.js&quot;&gt;&lt;/script&gt;&nbsp;</div>
+    <div> &lt;script src=&quot;js/jquery.custom.js&quot;&gt;&lt;/script&gt;</div>
+    <div> &lt;script src=&quot;js/jquery.placeholder.js&quot;&gt;&lt;/script&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;/head&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;body&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;div class=&quot;modal fade bs-example-modal-sm&quot; id=&quot;login&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &nbsp;<span class="underline">SING IN/SIGN UP CONTENT</span></div>
+    <div> &nbsp;&nbsp;</div>
+    <div> &lt;/div&gt;&lt;!-- /.modal --&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &nbsp;<span class="underline">NAVBAR CONTENT</span></div>
+    <div> &nbsp;</div>
+    <div> &lt;/nav&gt;&lt;!-- /.navbar --&gt;&nbsp;</div>
+    <div> &nbsp;</div>
+    <div> &lt;div class=&quot;container main-content&quot;&gt;</div>
+    <div> &nbsp;</div>
+    <div> &nbsp; &lt;div class=&quot;row&quot;&gt;</div>
+    <div> &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp; &lt;div class=&quot;col-md-8 left-content&quot;&gt;</div>
+    <div> &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp; <span class="underline">MAIN CONTENT</span>&nbsp;</div>
+    <div> &nbsp; &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp; &lt;/div&gt;&lt;!-- /.left-content --&gt;</div>
+    <div> &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp; &lt;div class=&quot;col-md-4 col-sm-12 sidebar padding hidden-sm hidden-xs&quot;&gt;&nbsp;</div>
+    <div> &nbsp; &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp;&nbsp;<span class="underline">SIDEBAR CONTENT</span>&nbsp;</div>
+    <div> &nbsp; &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp; &lt;/div&gt;&lt;!-- /.sidebar --&gt;&nbsp;</div>
+    <div> &nbsp; &nbsp;&nbsp;</div>
+    <div> &nbsp; &lt;/div&gt;&lt;!-- /.row --&gt;</div>
+    <div> &nbsp;&nbsp;</div>
+    <div> &nbsp; &lt;div class=&quot;footer-wrap&quot;&gt;</div>
+    <div> &nbsp;&nbsp;</div>
+    <div> &nbsp; &nbsp;<span class="underline">FOOTER CONTENT</span></div>
+    <div> &nbsp;&nbsp;</div>
+    <div> &nbsp; &lt;/div&gt;&lt;!-- /.footer-wrap --&gt;</div>
+    <div> &nbsp; &nbsp;</div>
+    <div> &lt;/div&gt;&lt;!-- /.container --&gt;</div>
+    <div> &nbsp;</div>
+    <div> &lt;/body&gt;&nbsp;</div>
+    <div> &nbsp;</div>
+    <div> &lt;/html&gt;</div>
+  </div>
+  </code>
+  <hr>
+  <h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+  <p>The theme uses three CSS files.</p> 
+  <p><strong>style.css</strong> contains all the styling of the site, structure, colors and more. All styling changes must be done here.</p>
+   <ul>
+    <li><strong>0.	Document Setup</strong></li>
+    <li><strong>1.	Set Categoty Colors</strong></li>
+    <li><strong>2.	Navigation & Menus</strong></li>
+    <li><strong>3.	Main Content Styles</strong></li>
+    <li><strong>4.	Post Content Styles</strong></li>
+    <li><strong>5.	Comments</strong></li>
+    <li><strong>6.	Category Styles</strong></li>
+    <li><strong>7.  Page Templates</strong></li>
+    <li><strong>8.	Widgets</strong></li>
+    <li><strong>9.	Footer Styles</strong></li>
+    <li><strong>10. Media Queries</strong></li>
+  </ul>
+  <p><strong>bootstrap.css</strong> contains all the core styles from the Bootstrap library. It´s not recomended to change anything on this stylesheet.</p> 
+  <p><strong>font-awesome.min.css</strong> contains the styles for the extended glyphicons from Font Awesome.</p>
+  <hr>
+  <h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+  <p>This theme imports nine Javascript files:</p>
+  <ul>
+    <li>jquery.min.js</li>
+    <li>jquery.mobile.min.js</li>
+    <li>bootstrap.min.js</li>
+    <li>jquery.imagesloaded.min.js</li>
+    <li>jquery.masonry.min.js</li>
+    <li>jquery.fitvids.js</li>
+    <li>jquery.custom.js</li>
+    <li>jquery.placeholder.js</li>
+    <li>jquery.validate.min.js</li>
+  </ul>
+  <p><strong>jquery.min.js</strong> is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.</p>
+  <p><strong>jquery.mobile.min.js</strong> is a HTML5-based user interface system designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices. In this theme is mainly used to create the touch-slide fuctionality on the slider.</p>
+  <p><strong>bootstrap.min.js</strong> contains all the UI elements that Bootstrap offers, tabs, modal, tooltip, corrousel.</p>
+  <p><strong>jquery.imagesloaded.min.js</strong> is a small plugin for jQuery that detect when images have been loaded. It's specially important for the masonry plugin.</p>
+  <p><strong>jquery.masonry.min.js</strong> is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall.</p>
+  <p><strong>jquery.fitvids.js</strong> is a lightweight, easy-to-use jQuery plugin for fluid width video embeds.</p>
+  <p><strong>jquery.custom.js</strong> contains the trigger for the tabs, tooltip, scrollable, the ajax post load, the dropdowns and the mobile functionality.</p>
+  <p><strong>jquery.placeholder.js</strong> is a jQuery plugin that enables HTML5 placeholder behavior for browsers that aren’t trying hard enough yet.</p>
+  <p><strong>jquery.validate.min.js</strong> is a jQuery plugin that makes simple clientside form validation easy, whilst still offering plenty of customization options. </p>
+  <hr>
+  <h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+  <p>I've used the following images, icons or other files as listed.</p>
+  <ul>
+  	<li>Bootstrap - <a href="http://getbootstrap.com">http://getbootstrap.com</a></li>
+    <li>Font Awesome - <a href="http://fortawesome.github.io/Font-Awesome">http://fortawesome.github.io/Font-Awesome</a></li>
+    <li>jQuery - <a href="http://www.jquery.com">http://www.jquery.com</a></li>
+    <li>jQuery Mobile - <a href="http://jquerymobile.com">http://jquerymobile.com</a></li>
+    <li>Bootstrap - <a href="http://getbootstrap.com">http://getbootstrap.com</a></li>
+    <li>Images Loaded - <a href="http://desandro.github.io/imagesloaded">http://desandro.github.io/imagesloaded</a></li>
+    <li>Masonry - <a href="http://masonry.desandro.com">http://masonry.desandro.com</a></li>
+    <li>Fitvids - <a href="http://fitvidsjs.com">http://fitvidsjs.com</a></li>
+    <li>Placeholder - <a href="https://github.com/mathiasbynens/jquery-placeholder">https://github.com/mathiasbynens/jquery-placeholder</a></li>
+    <li>Validate - <a href="http://jqueryvalidation.org">http://jqueryvalidation.org</a></li>
+  </ul>
+  <hr>
+  <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this app. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+  <p class="append-bottom alt large"><strong>Volumens</strong></p>
+  <p><a href="#toc">Go To Table of Contents</a></p>
+  <hr class="space">
+</div>
+<!-- end div .container -->
+</body>
+</html>
