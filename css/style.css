@@ -39,6 +39,20 @@
     vertical-align: top; 
 }*/
 
+
+	
+.left-content:before  {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+	width: 50%;
+    background: #fff;
+	display: block
+}
+
 body {
 	background: #f3f3f3;
 	font-family: 'Roboto', sans-serif;
@@ -201,13 +215,12 @@ textarea:focus {
 .sidebar .twitter-widget a:hover,
 .content a:hover,
 .author a:hover {
-    color: #666;
+    color: #666666;
 }
 
 #media-content .carousel-arrow a:hover,
 .carousel .home h3,
 .box .home a,
-.pagination > .active > a,
 .dropdown-submenu > .dropdown-menu,
 .navbar-inverse .navbar-nav > li.home > a > span,
 .navbar-inverse .navbar-nav > li.home > a:hover,
@@ -788,6 +801,9 @@ textarea:focus {
 #primary { 
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+
+#primary.masonry { 
 	background-image: url(../images/separator.png);
 	background-repeat: repeat-y;
 	background-position: center top;
@@ -1007,10 +1023,6 @@ textarea:focus {
 /*	7.	Page Templates
 /*-----------------------------------------------------------------------------------*/
 
-/* Search */
-
-.search-page #primary {background:none}
-
 /* Contact Form */
 
 label.error {
@@ -1035,22 +1047,37 @@ label.error {
 /* 404 Error */
 
 .not-found {
-	text-align: center;
-	min-height: 500px;
+	padding-top: 100px;
+	padding-bottom: 200px;
 }
 
 .not-found h1 {
 	text-transform: uppercase;
 	color: #d0d0d0;
-	font-size: 300px;
+	font-size: 72px;
 	font-weight: bold;
-	text-shadow: rgba(0,0,0,.5) -1px 0,rgba(0,0,0,.3) 0 -1px,rgba(255,255,255,.5) 0 1px,rgba(0,0,0,.3) -1px -1px
+	letter-spacing: -1px;
+	text-shadow: rgba(0,0,0,.5) -1px 0,rgba(0,0,0,.3) 0 -1px,rgba(255,255,255,.5) 0 1px,rgba(0,0,0,.3) -1px -1px;
 }
 
 .not-found h2 {
 	color: #ff6400;
 	font-size: 24px;
 	font-weight: bold;
+	margin-bottom: 20px
+}
+
+.not-found .btn { 
+	margin-right: 10px; 
+	margin-bottom: 10px;
+}
+
+.not-found .btn-home { 
+	color: #ffffff  !important
+}
+
+.not-found .btn-support { 
+	color: #333333 !important
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1485,14 +1512,8 @@ label.error {
 		margin-top: 71px;
 	}
 	
-	/*#media-content .carousel-overlay {
-		position: relative; 
-		background: #333333;
-	}*/
-	
 	#media-content .carousel-caption {
 		width: 100%;
-		/*position: relative;*/
 	}
 	
 	#media-content .carousel-caption h1 {
@@ -1504,7 +1525,7 @@ label.error {
 		margin-bottom: 0;
 	}
 
-	#primary {
+	#primary.masonry {
 		background-image: none;
 		padding-top: 25px;
 	} 
@@ -1564,10 +1585,6 @@ label.error {
 
 	.post-meta .related .box {
 		margin-bottom: 20px;
-	}
-	
-	.related .box:nth-last-child(-n+2) {
-  		margin-bottom: 0 !important;
 	}
 	
 	#comments h3 {
