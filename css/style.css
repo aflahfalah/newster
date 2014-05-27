@@ -32,6 +32,8 @@
 /*.main-content {
 	 display: table;  
 }
+
+
 	
 .left-content, .sidebar { 
 	float: none; 
@@ -41,7 +43,7 @@
 
 
 	
-.left-content:before  {
+/*.left-content:before  {
     content: '';
     position: absolute;
     top: 0;
@@ -51,7 +53,7 @@
 	width: 50%;
     background: #fff;
 	display: block
-}
+}*/
 
 body {
 	background: #f3f3f3;
@@ -1480,12 +1482,6 @@ label.error {
 /* ---------------------------------------------------------------------- */
 /*	10. Media Queries
 /* ---------------------------------------------------------------------- */
-
-@media(min-width:1200px){}
-
-@media(min-width:992px){}
-
-@media(min-width:768px){}
 
 @media(max-width:767px) {
 	
