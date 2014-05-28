@@ -171,7 +171,6 @@ textarea:focus {
 /*	1.	Set Categoty Colors
 /*-----------------------------------------------------------------------------------*/
 
-.modal-content a,
 #featured h2 a:hover,
 #primary .box h2 a:hover,
 .tab-widget .tab-content h5 a:hover,
@@ -587,12 +586,12 @@ textarea:focus {
 
 .left-content {
 	padding: 0;
-	margin-top: -20px;
+	margin: -20px 0 0 0;
 }
 
 .patch {
 	height: 21px;
-	margin: -1px;
+	margin: -1px -1px -21px -1px;
 	border-left: 1px solid #bbbbbb;
 	border-right: 1px solid #bbbbbb;
 	border-top: 1px solid #bbbbbb;

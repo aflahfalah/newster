@@ -60,13 +60,8 @@ jQuery(document).ready(function($) {
 		if (!$viewLoad){
 			$.get('load-more.php', function( data ) {
 				post = data;
-
-				console.log($currentItem)
-
 				$items = $(data).length;
-				//$moreBlocks = $(post[$currentItem]);
 				$moreBlocks = $(post[$currentItem] + post[$currentItem + 1]);
-
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
@@ -83,7 +78,6 @@ jQuery(document).ready(function($) {
 				}else{
 					$moreBlocks = $(post[$currentItem]);
 				}
-				
 				$container.append($moreBlocks);
 				$container.imagesLoaded( function() {
 					$container.masonry('appended', $moreBlocks);
