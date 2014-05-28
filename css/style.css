@@ -29,31 +29,6 @@
 /*	0.	Document Setup (body, common classes, vertical rhythm, structure etc)
 /*-----------------------------------------------------------------------------------*/
 
-
-
-/*.main-content {
-	 display: table; 
-}
-
-.left-content, .sidebar { 
-	float: none; 
-	display: table-cell; 
-    vertical-align: top;
-}*/
-
-
-/*.left-content:before  {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    left: 0;
-	width: 50%;
-    background: #fff;
-	display: block
-}*/
-
 body {
 	background: #f3f3f3;
 	font-family: 'Roboto', sans-serif;
@@ -93,17 +68,10 @@ textarea:focus {
 .main-content {
 	margin-top: 100px;
 	border: 1px solid #bbbbbb;
-	/*background: #f9f9f9;*/
+	background: #ffffff;
 	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.15);
 	-moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.15);
 	box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.15);
-}
-
-.main-content {
-	 background-image: url(../images/page-bg.png);
-	 background-repeat: repeat-y ;
-	 background-position: center;
-	 background-size: contain;
 }
 
 .padding {
@@ -631,16 +599,6 @@ textarea:focus {
 	background: #ffffff;
 }
 
-/*.left-content {
-	background-color: #ffffff;
-	border: 1px solid #bbbbbb;
-	padding: 0;
-	margin: -21px -1px 0 -1px;
-	-webkit-box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.2);
-	-moz-box-shadow:    0px 0px 20px rgba(50, 50, 50, 0.2);
-	box-shadow:         0px 0px 20px rgba(50, 50, 50, 0.2);
-}*/
-
 /* Slider */
 
 #media-content {
@@ -1056,7 +1014,7 @@ label.error {
 
 .main-content.full-width {
 	margin-top: 80px;
-	background: #ffffff !important
+	background-image: none
 }
 
 .main-content.full-width .left-content {
@@ -1084,7 +1042,7 @@ label.error {
 	color: #ff6400;
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 20px
+	margin-bottom: 20px;
 }
 
 .not-found .btn { 
@@ -1093,11 +1051,11 @@ label.error {
 }
 
 .not-found .btn-home { 
-	color: #ffffff  !important
+	color: #ffffff !important;
 }
 
 .not-found .btn-support { 
-	color: #333333 !important
+	color: #333333 !important;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -1503,7 +1461,15 @@ label.error {
 
 @media(min-width:1200px){}
 
-@media(min-width:992px){}
+@media(min-width:992px){
+	
+	.main-content {
+		background-image: url(../images/page-bg.png);
+		background-repeat: repeat-y;
+		background-size: contain;
+	}
+	
+}
 
 @media(min-width:768px){}
 
@@ -1530,7 +1496,6 @@ label.error {
 
 	.main-content {
 		margin-top: 70px;
-		background: #ffffff
 	}
 	
 	#media-content .carousel-caption {
@@ -1617,7 +1582,6 @@ label.error {
 	}
 
 	.main-content.full-width {
-		background: #fff;
 		margin-top: 50px;
 	}
 
