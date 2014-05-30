@@ -12,6 +12,7 @@ jQuery(document).ready(function($) {
 
 	$('#open').click(function() {
 		$('.search').slideToggle(200);
+		$('.search input').focus();
 	});
 	
 	$('#close').click(function() {

@@ -1,0 +1,57 @@
+.ui-spinner {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:200;
+}
+
+#stlChanger .spinner-wrpr {
+	float:right;
+	padding:7px 0;
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger .spinner-wrpr input {
+	border-left:0;
+	border-right:0;
+	padding:5px 0;
+	position:relative;
+	z-index:201;
+	height:16px;
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+}
+
+.ui-spinner-buttons {
+	padding:0 0 1px;
+	position:absolute;
+}
+
+#stlChanger .ui-spinner-button {
+	padding:0 0 28px;
+	overflow:hidden;
+	position:absolute;
+	top:7px;
+	cursor:pointer;
+	z-index:202;
+}
+
+#stlChanger .ui-spinner-button .ui-icon-triangle-1-n {
+	border:1px solid #b7b7b7;
+	background:#fefefe url(../images/right.jpg) 7px 9px no-repeat;
+	padding:3px 0;
+	border-radius:0 5px 5px 0;
+	-moz-border-radius:0 5px 5px 0;
+	-webkit-border-radius:0 5px 5px 0;
+}
+
+#stlChanger .ui-spinner-button .ui-icon-triangle-1-s {
+	border:1px solid #b7b7b7;
+	background:#fefefe url(../images/left.jpg) 7px 9px no-repeat;
+	padding:3px 0;
+	border-radius:5px 0 0 5px;
+	-moz-border-radius:5px 0 0 5px;
+	-webkit-border-radius:5px 0 0 5px;
+}

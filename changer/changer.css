@@ -1,0 +1,244 @@
+/* Style Changer */
+
+#stlChanger {
+	color:#010101;
+	font-size:1em;
+	overflow:hidden;
+	position:fixed;
+	top:60px;
+	left:0;
+	z-index:9999;
+}
+
+#stlChanger #styleLoader {
+	background:url(../images/loading_for_light.gif) 0 0 no-repeat;
+	width:21px;
+	height:16px;
+	position:absolute;
+	top:7px;
+	right:9px;
+	display:none;
+}
+
+#stlChanger .siteChanger, #stlChanger .bgChanger, #stlChanger .stCols, #stlChanger .buts {
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger .siteChanger, #stlChanger .bgChanger {
+	min-width:35px;
+	min-height:65px;
+}
+
+#stlChanger a {color:#010101;}
+
+#stlChanger a:hover {text-decoration:none;}
+
+#stlChanger input {
+	font-family:"Trebuchet MS", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	border:1px solid #b7b7b7;
+	color:#010101;
+	width:120px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#stlChanger select {
+	font-family:"Trebuchet MS", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	border:1px solid #b7b7b7;
+	color:#010101;
+	font-size:1em;
+	width:130px;
+	padding:3px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#stlChanger .blockChanger {
+	width:120px;
+	padding:0 36px 5px 0;
+}
+
+#stlChanger .chBody {
+	border-top:1px solid #ececec;
+	border-bottom:1px solid #ececec;
+	border-right:1px solid #ececec;
+	background:#fefefe;
+	width:100px;
+	padding:0 9px 12px 10px;
+	position:relative;
+	overflow:hidden;
+	border-radius:0 2px 2px 0;
+	-moz-border-radius:0 2px 2px 0;
+	-o-border-radius:0 2px 2px 0;
+	-webkit-border-radius:0 2px 2px 0;
+}
+
+#stlChanger .chBut {
+	border-top:1px solid #ececec;
+	border-bottom:1px solid #ececec;
+	border-right:1px solid #ececec;
+	background:#fefefe url(images/arrow.png) 14px 16px no-repeat;
+	width:35px;
+	height:40px;
+	position:absolute;
+	top:24px;
+	right:1px;
+	z-index:10;
+	border-radius:0 2px 2px 0;
+	-moz-border-radius:0 2px 2px 0;
+	-o-border-radius:0 2px 2px 0;
+	-webkit-border-radius:0 2px 2px 0;
+}
+
+#stlChanger .chBut.closed {background-position:15px -33px;}
+
+#stlChanger .stBlock {
+	position:relative;
+	overflow:hidden;
+	width:102px;
+}
+
+#stlChanger span {
+	font-size:10px;
+	text-transform:uppercase;
+	display:block;
+	padding:3px 0;
+}
+
+#stlChanger .stCols span, #stlChanger .stBgs a {
+	border: 1px solid #ECECEC;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin: 0 4px 4px 0;
+    padding: 0;
+    text-decoration: none;
+    width: 28px;
+}
+
+#stlChanger .stCols span {text-indent:-9999px;}
+
+#stlChanger .stCols span.current {
+	border:1px solid #b7b7b7;
+	width:18px;
+	height:14px;
+}
+
+#stlChanger .stBgs a.current img, #stlChanger .stBgs a.bg_t.current img {
+}
+
+#stlChanger a.stColor {
+	color:#7c7c7c;
+	display:block;
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger a.stColor span {
+	background:url(images/picker.png) no-repeat 42px 10px;
+	border:1px solid #000000;
+	width:97px;
+	height:38px;
+	padding:0;
+	margin:0;
+}
+
+#stlChanger .stColorParent {
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger a.stColor2 {
+	color:#7c7c7c;
+	display:block;
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger a.stColor2 span {
+	background:url(images/picker.png) no-repeat 42px 10px;
+	border:1px solid #000000;
+	width:97px;
+	height:38px;
+	padding:0;
+	margin:0;
+}
+
+#stlChanger .buts {
+	float:right;
+	padding:7px 1px;
+}
+
+#stlChanger .buts a {
+	border:1px solid #b7b7b7;
+	display:block;
+	line-height:22px;
+	text-align:center;
+	width:39px;
+	height:22px;
+	float:left;
+	padding:2px 0;
+	background:#fefefe;
+	background:linear-gradient(#f7f7f7, #efefef);
+	background:-moz-linear-gradient(#f7f7f7, #efefef);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#f7f7f7), to(#efefef));
+	-pie-background:linear-gradient(#f7f7f7, #efefef);
+	border-radius:0 5px 5px 0;
+	-moz-border-radius:0 5px 5px 0;
+	-webkit-border-radius:0 5px 5px 0;
+}
+
+#stlChanger .buts a.current, #stlChanger .buts a:hover {
+	background:linear-gradient(#efefef, #f7f7f7);
+	background:-moz-linear-gradient(#efefef, #f7f7f7);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#efefef), to(#f7f7f7));
+	-pie-background:linear-gradient(#efefef, #f7f7f7);
+}
+
+#stlChanger .buts a:first-child {
+	border-right:0;
+	border-radius:5px 0 0 5px;
+	-moz-border-radius:5px 0 0 5px;
+	-webkit-border-radius:5px 0 0 5px;
+}
+
+#stlChanger .butNParent {
+	border-top:1px solid #b7b7b7;
+	padding:8px 8px 0 10px;
+	margin:0 -8px -7px -10px;
+	position:relative;
+	overflow:hidden;
+}
+
+#stlChanger .butNParent a.butN {
+	border:1px solid #b7b7b7;
+	display:block;
+	line-height:22px;
+	text-align:center;
+	width:58px;
+	height:22px;
+	float:right;
+	padding:2px 0;
+	margin:0 2px 0 0;
+	background:#fefefe;
+	background:linear-gradient(#f7f7f7, #efefef);
+	background:-moz-linear-gradient(#f7f7f7, #efefef);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#f7f7f7), to(#efefef));
+	-pie-background:linear-gradient(#f7f7f7, #efefef);
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#stlChanger .butNParent a.butN:first-child {float:left;}
+
+#stlChanger .butNParent a.butN:hover {
+	background:linear-gradient(#efefef, #f7f7f7);
+	background:-moz-linear-gradient(#efefef, #f7f7f7);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#efefef), to(#f7f7f7));
+	-pie-background:linear-gradient(#efefef, #f7f7f7);
+}
