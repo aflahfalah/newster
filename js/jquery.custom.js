@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 	/*	Boostrap Carousel
 	/*-----------------------------------------------------------------------------------*/
 
-	$('#slider').carousel({
+	$('#media-content').carousel({
 	  interval: 10000
 	});
 	
