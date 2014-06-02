@@ -70,7 +70,6 @@ textarea:focus {
 }
 
 .main-content {
-	margin-top: -200px;
 	border: 1px solid #bbbbbb;
 	background: #ffffff;
 	z-index: 3;
@@ -733,7 +732,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 #media-content .carousel-caption {
     left: 0;
-	bottom: 200px;
+	bottom: 0;
 	text-align: left;
 	width: 100%;
 }
