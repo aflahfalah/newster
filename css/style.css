@@ -681,6 +681,16 @@ textarea:focus {
 	position: absolute;
 }
 
+#media-content .carousel-inner .item .background {
+   background-position: center center; 
+   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+}
+
 #media-content .carousel-inner .item {
     opacity: 0;
     -webkit-transition-property: opacity;
@@ -1594,9 +1604,11 @@ label.error {
 		font-size: 20px;
 	}
 
-	.main-content {
+	/*.main-content {
 		margin-top: 70px;
-	}
+	}*/
+	
+	#media-content .carousel-inner .item .background {min-height: 300px !important}
 	
 	#media-content .carousel-caption {
 		width: 100%;
