@@ -70,10 +70,10 @@ textarea:focus {
 }
 
 .main-content {
-	border-top: 5px solid #222222;
-	border-left: 1px solid #bbbbbb;
+	border-top: 6px solid #222222;
+	/*border-left: 1px solid #bbbbbb;
 	border-right: 1px solid #bbbbbb;
-	border-bottom: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;*/
 	background: #ffffff;
 	z-index: 3;
 	-webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.15);
@@ -781,31 +781,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     margin: 0;
 }
 
-/* Small Bow */
-
-.small-box {
-
-	
-}
-
-
-.small-box .box {
-	position: relative;
-
-	
-}
-
-.small-box .box h2 a{
-	position: absolute;
-	color:#ffffff;
-	font-weight: bold;
-	left: 10px;
-	bottom: 10px;
-	font-family: 'Montserrat', sans-serif;
-letter-spacing: -1px;
-	
-}
-
 /* Featured */
 
 #featured .ribbon {
@@ -1496,10 +1471,6 @@ label.error {
 }
 
 /* Footer */
-
-.footer-wrap {
-	margin: 0 -1px -1px -1px;
-}
 
 .footer {
 	color: #999999;
